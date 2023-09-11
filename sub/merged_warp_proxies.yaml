@@ -39,19 +39,18 @@ proxies:
   - 8.8.8.8
   dialer-proxy: WARP前置节点
 - name: 洛杉矶1
-  type: hysteria
-  server: 108.181.22.138
-  port: 18953
-  47000-48000: null
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: fldekhmcKd8hrHyIjPpnqLfGf6xAciNUm3KpPkux5yyg94uxZy
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: vless
+  server: 108.181.18.187
+  port: 443
+  udp: true
+  uuid: cb26c708-2cbb-4cad-b66d-d7e39808dfad
+  tls: true
+  servername: addons.mozilla.org
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: ipkaULYBqXoRYrNMFDayyc_kFta1POlXisjhHbzZxy4
+  client-fingerprint: chrome
 - name: 洛杉矶2
   type: vless
   server: 108.181.22.130
@@ -66,19 +65,18 @@ proxies:
     public-key: 1u8wDSgys6gX-4qWVC9bJsRZUJk6M--SNDqgI4lIUgY
   client-fingerprint: chrome
 - name: 洛杉矶3
-  type: hysteria
-  server: 108.181.18.188
-  port: 51980
-  15000-16000: null
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: 155RG0Zj3DU0mYJh1MbzNVucrUu7pvEwLnVov0C7PWmEXkqAsW
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: vless
+  server: 108.181.18.189
+  port: 443
+  udp: true
+  uuid: cb26c708-2cbb-4cad-b66d-d7e39808dfad
+  tls: true
+  servername: addons.mozilla.org
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: ipkaULYBqXoRYrNMFDayyc_kFta1POlXisjhHbzZxy4
+  client-fingerprint: chrome
 - name: 洛杉矶5
   type: vless
   server: 45.136.245.126
@@ -106,19 +104,18 @@ proxies:
     public-key: xR3BwG1BWGWuRlHf8n3M1HPQeEV0FxATWuURzfCLkyE
   client-fingerprint: chrome
 - name: 洛杉矶6
-  type: hysteria
-  server: 108.181.18.189
-  port: 51980
-  15000-16000: null
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: 155RG0Zj3DU0mYJh1MbzNVucrUu7pvEwLnVov0C7PWmEXkqAsW
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: vless
+  server: 108.181.22.138
+  port: 443
+  udp: true
+  uuid: 63348f14-b4fb-4c9f-b087-a1f458283c9f
+  tls: true
+  servername: swcdn.apple.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: qPWdelx7FdWFEHZY0plfhYG_4CVoTgxFVH-EZe1kjhY
+  client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
