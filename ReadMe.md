@@ -33,7 +33,8 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/shadowrocket_ba
 ```
 
 ## 致谢
-[ChromeGo](https://github.com/bannedbook/fanqiang/releases/tag/ChromeGo-latest)
+[Alvin9999](https://github.com/Alvin9999/pac2/tree/master)
+
 
 ## Chromego聚合说明
 | ChromeGo文件夹 | 协议 | 结果 | 备注 |
