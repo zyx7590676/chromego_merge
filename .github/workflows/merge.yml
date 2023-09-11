@@ -5,7 +5,7 @@ on:
     branches:
       - main  # 替换为你的默认分支
   schedule:
-    - cron:  '0 0 * * 0'  # 每周日午夜触发
+    - cron:  '0 0 */3 * *'  # 每三天一次
 
 jobs:
   merge:

@@ -97,8 +97,8 @@ try:
                 mport = ports_slt[1]
             else:
                 mport = server_port
-            
-
+            fast_open = json_data["fast_open"]
+            insecure = json_data["insecure"]
             server_name = json_data["server_name"]
             alpn = json_data["alpn"]
             protocol = json_data["protocol"]
@@ -114,10 +114,10 @@ try:
                 "auth_str": auth,
                 "up": 11,
                 "down": 55,
-                "fast-open": True,
+                "fast-open": fast_open,
                 "protocol": protocol,
                 "sni": server_name,
-                "skip-cert-verify": True,
+                "skip-cert-verify": insecure,
                 "alpn": [alpn]
             }
 

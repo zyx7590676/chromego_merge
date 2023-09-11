@@ -46,5 +46,9 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/shadowrocket_ba
 | psiphon   | 未知   | 未聚合   |  不知道是什么东西   | 
 | clashB v2go v2rayB   | 各种ss vmess   | 未聚合   |  又臭又长很多节点都已经失效   | 
 
-## shadowrocket支持
+## 其他订阅
+chromego中的clash节点(量很大，可用性未知)
+```
+https://fastly.jsdelivr.net/gh/jsvpn/jsproxy@dev/baitai/20200329/1302338.md
+```
 
