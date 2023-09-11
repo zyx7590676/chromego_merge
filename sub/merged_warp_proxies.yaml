@@ -40,45 +40,45 @@ proxies:
   dialer-proxy: WARP前置节点
 - name: 洛杉矶1
   type: hysteria
-  server: 163.123.192.19
-  port: 10083
+  server: 108.181.22.138
+  port: 18953
   47000-48000: null
   sni: bing.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: sRO5Mb3Na8UBq59AwSnmACWrvQ1FHKiYxhZgrbYmkgCC6S3cBR
+  auth_str: fldekhmcKd8hrHyIjPpnqLfGf6xAciNUm3KpPkux5yyg94uxZy
   up: 11
   down: 55
   hop_interval: 10
 - name: 洛杉矶2
-  type: hysteria
+  type: vless
   server: 108.181.22.130
-  port: 44056
-  47000-48000: null
-  sni: qq.com
+  port: 17680
+  udp: true
+  uuid: d606dfe0-267e-424f-8e0b-5dfdfbf7bc2d
+  tls: true
+  servername: download-installer.cdn.mozilla.net
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 1u8wDSgys6gX-4qWVC9bJsRZUJk6M--SNDqgI4lIUgY
+  client-fingerprint: chrome
+- name: 洛杉矶3
+  type: hysteria
+  server: 108.181.18.188
+  port: 51980
+  15000-16000: null
+  sni: bing.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: mWpUGqLT60IOf9A4Aqi59yqUvacoAoE1yAtPBg71E6ze4KnBau
+  auth_str: 155RG0Zj3DU0mYJh1MbzNVucrUu7pvEwLnVov0C7PWmEXkqAsW
   up: 11
   down: 55
   hop_interval: 10
-- name: 洛杉矶3
-  type: tuic
-  server: x1.cfcdn3.xyz
-  port: 52389
-  udp: true
-  uuid: d9bc1fa7-30fa-4a25-b8a4-e0fab2ddcf15
-  password: d9bc1fa7-30fa-4a25-b8a4-e0fab2ddcf15
-  alpn:
-  - h3
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
 - name: 洛杉矶5
   type: vless
   server: 45.136.245.126
@@ -106,18 +106,19 @@ proxies:
     public-key: xR3BwG1BWGWuRlHf8n3M1HPQeEV0FxATWuURzfCLkyE
   client-fingerprint: chrome
 - name: 洛杉矶6
-  type: tuic
-  server: x3.freek1.xyz
-  port: 54582
-  udp: true
-  uuid: 088a6c3b-a555-4117-bfa1-2efd7ef0180e
-  password: 088a6c3b-a555-4117-bfa1-2efd7ef0180e
+  type: hysteria
+  server: 108.181.18.189
+  port: 51980
+  15000-16000: null
+  sni: bing.com
+  skip-cert-verify: true
   alpn:
   - h3
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
+  protocol: udp
+  auth_str: 155RG0Zj3DU0mYJh1MbzNVucrUu7pvEwLnVov0C7PWmEXkqAsW
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
