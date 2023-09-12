@@ -72,6 +72,19 @@ proxies:
   reality-opts:
     public-key: DL3tRdvx41PM2ia5va65Arz9iadqDgF9DXbfpuYa-Qc
   client-fingerprint: chrome
+- name: meta51
+  type: vless
+  server: 45.145.72.227
+  port: 14169
+  udp: true
+  uuid: 01f0b154-261a-436b-9ea9-c0eb70b401ff
+  tls: true
+  servername: addons.mozilla.org
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: ggobXk3UxEjkGDGEC7_6ih5HpwuA8fafIDvFfuWUGS8
+  client-fingerprint: chrome
 - name: meta61
   type: vless
   server: 108.181.22.139
@@ -260,6 +273,7 @@ proxy-groups:
   - meta21
   - meta31
   - meta41
+  - meta51
   - meta61
   - meta71
   - meta81
@@ -284,6 +298,7 @@ proxy-groups:
   - meta21
   - meta31
   - meta41
+  - meta51
   - meta61
   - meta71
   - meta81
