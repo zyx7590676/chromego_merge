@@ -66,16 +66,16 @@ proxies:
   client-fingerprint: chrome
 - name: meta31
   type: vless
-  server: 45.145.72.226
-  port: 15579
+  server: 185.22.153.124
+  port: 34562
   udp: true
-  uuid: 4ceda034-aa43-4df6-9f66-9917df25102e
+  uuid: 1aebdc19-0794-40c8-98fd-ed4eb69aa596
   tls: true
-  servername: gateway.icloud.com
+  servername: itunes.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: QfXEIkUSMzZ1yaotl-BvjPP9iAkv38p3rH_eT8DnjAs
+    public-key: DL3tRdvx41PM2ia5va65Arz9iadqDgF9DXbfpuYa-Qc
   client-fingerprint: chrome
 - name: meta41
   type: vless
@@ -92,16 +92,16 @@ proxies:
   client-fingerprint: chrome
 - name: meta51
   type: vless
-  server: 45.145.72.227
-  port: 14169
+  server: 166.1.18.191
+  port: 10489
   udp: true
-  uuid: 01f0b154-261a-436b-9ea9-c0eb70b401ff
+  uuid: f25e53a6-1694-45c5-8011-9aac6a58c6da
   tls: true
-  servername: addons.mozilla.org
+  servername: gateway.icloud.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: ggobXk3UxEjkGDGEC7_6ih5HpwuA8fafIDvFfuWUGS8
+    public-key: hTq0VT11aaSIhEJBSwG058LquoM-sKZAMGPlWcIsaR0
   client-fingerprint: chrome
 - name: meta61
   type: vless
