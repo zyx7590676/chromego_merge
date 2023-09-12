@@ -10,7 +10,7 @@ try:
         urls = file.read().splitlines()
 
     # 遍历每个网址
-    for url in urls:
+    for index, url in enumerate(urls):
         try:
             # 使用适当的方法从网址中获取内容，这里使用urllib库示例
             response = urllib.request.urlopen(url)
@@ -21,6 +21,10 @@ try:
 
             # 提取proxies部分并合并到merged_proxies中
             proxies = content.get('proxies', [])
+
+            # 修改proxies数组中的每个代理项的'name'属性为序号
+            for i, proxy in enumerate(proxies):
+                proxy['name'] = "meta"+str(index + 1)+str(i + 1 )
 
             merged_proxies.extend(proxies)
         except Exception as e:

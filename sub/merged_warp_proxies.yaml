@@ -38,7 +38,7 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: 洛杉矶1
+- name: meta11
   type: vless
   server: 108.181.18.187
   port: 443
@@ -51,7 +51,7 @@ proxies:
   reality-opts:
     public-key: ipkaULYBqXoRYrNMFDayyc_kFta1POlXisjhHbzZxy4
   client-fingerprint: chrome
-- name: 洛杉矶2
+- name: meta21
   type: vless
   server: 108.181.22.130
   port: 17768
@@ -64,7 +64,7 @@ proxies:
   reality-opts:
     public-key: yQ6_r7lGEwNA20d4wdcMtbll75rH3Hv7W74Nn_503Cs
   client-fingerprint: chrome
-- name: 洛杉矶3
+- name: meta31
   type: vless
   server: 45.145.72.226
   port: 15579
@@ -77,7 +77,7 @@ proxies:
   reality-opts:
     public-key: QfXEIkUSMzZ1yaotl-BvjPP9iAkv38p3rH_eT8DnjAs
   client-fingerprint: chrome
-- name: 洛杉矶5
+- name: meta41
   type: vless
   server: 185.22.153.124
   port: 34562
@@ -90,20 +90,7 @@ proxies:
   reality-opts:
     public-key: DL3tRdvx41PM2ia5va65Arz9iadqDgF9DXbfpuYa-Qc
   client-fingerprint: chrome
-- name: 洛杉矶4
-  type: vless
-  server: 45.145.72.227
-  port: 14169
-  udp: true
-  uuid: 01f0b154-261a-436b-9ea9-c0eb70b401ff
-  tls: true
-  servername: addons.mozilla.org
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: ggobXk3UxEjkGDGEC7_6ih5HpwuA8fafIDvFfuWUGS8
-  client-fingerprint: chrome
-- name: 洛杉矶6
+- name: meta61
   type: vless
   server: 108.181.22.139
   port: 10982
@@ -115,6 +102,58 @@ proxies:
   network: tcp
   reality-opts:
     public-key: S6ycbWYBM6WB-5SzRQSwVTFHF6v4BUHQf0Rus5B7KG0
+  client-fingerprint: chrome
+- name: meta71
+  type: vless
+  server: 45.150.165.61
+  port: 15967
+  udp: true
+  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
+  tls: true
+  servername: www.lovelive-anime.jp
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
+  client-fingerprint: chrome
+- name: meta81
+  type: vless
+  server: 45.150.165.61
+  port: 15967
+  udp: true
+  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
+  tls: true
+  servername: www.lovelive-anime.jp
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
+  client-fingerprint: chrome
+- name: meta91
+  type: vless
+  server: 45.150.165.61
+  port: 15967
+  udp: true
+  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
+  tls: true
+  servername: www.lovelive-anime.jp
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
+  client-fingerprint: chrome
+- name: meta101
+  type: vless
+  server: 45.150.165.61
+  port: 15967
+  udp: true
+  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
+  tls: true
+  servername: www.lovelive-anime.jp
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
   client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
@@ -251,12 +290,15 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - 洛杉矶1
-  - 洛杉矶2
-  - 洛杉矶3
-  - 洛杉矶5
-  - 洛杉矶4
-  - 洛杉矶6
+  - meta11
+  - meta21
+  - meta31
+  - meta41
+  - meta61
+  - meta71
+  - meta81
+  - meta91
+  - meta101
   - hysteria0
   - hysteria1
   - hysteria2
@@ -269,12 +311,15 @@ proxy-groups:
   type: select
   proxies:
   - 油管-绵阿羊
-  - 洛杉矶1
-  - 洛杉矶2
-  - 洛杉矶3
-  - 洛杉矶5
-  - 洛杉矶4
-  - 洛杉矶6
+  - meta11
+  - meta21
+  - meta31
+  - meta41
+  - meta61
+  - meta71
+  - meta81
+  - meta91
+  - meta101
   - hysteria0
   - hysteria1
   - hysteria2
@@ -287,12 +332,15 @@ proxy-groups:
   type: load-balance
   proxies:
   - 油管-绵阿羊
-  - 洛杉矶1
-  - 洛杉矶2
-  - 洛杉矶3
-  - 洛杉矶5
-  - 洛杉矶4
-  - 洛杉矶6
+  - meta11
+  - meta21
+  - meta31
+  - meta41
+  - meta61
+  - meta71
+  - meta81
+  - meta91
+  - meta101
   - hysteria0
   - hysteria1
   - hysteria2
