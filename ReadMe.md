@@ -1,5 +1,4 @@
 ## 简介
-本仓库可能随时关闭
 
 Alvin9999这几天有时候一小时更新一次节点，我这个仓库是每六个小时爬一次的，所以有的节点可能会因为时间差导致无法使用
 
@@ -19,8 +18,26 @@ chromego如果更新我会及时修改代码保证代码可用，如果更新不
 可以用warp+机器人和提取wg节点替换掉配置文件中的wg信息
 [warp提取wireguard网站](https://replit.com/@misaka-blog/wgcf-profile-generator)
 [warp+机器人](https://t.me/generatewarpplusbot)
-## 订阅链接分享
 
+## 订阅链接分享(无需翻墙版-托管自netlify）
+### 不套warp版本（clashmeta
+```
+https://mareep.netlify.app/sub/merged_proxies.yaml
+```
+### 套warp版本（clashmeta
+```
+https://mareep.netlify.app/sub/merged_warp_proxies.yaml
+
+```
+### shadowrocket订阅链接
+```
+https://mareep.netlify.app//sub/shadowrocket_base64.txt
+```
+
+## 订阅链接分享（需要翻墙版-托管自github）
+<details>
+  <summary>点击展开/折叠</summary>
+  
 ### 不套warp版本（clashmeta
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_proxies.yaml
@@ -28,11 +45,15 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_proxies.
 ### 套warp版本（clashmeta
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_warp_proxies.yaml
+
 ```
 ### shadowrocket订阅链接
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/shadowrocket_base64.txt
 ```
+
+</details>
+
 
 ## 致谢
 [Alvin9999](https://github.com/Alvin9999/pac2/tree/master)
@@ -54,4 +75,10 @@ chromego中的clash节点(量很大，可用性未知)
 ```
 https://fastly.jsdelivr.net/gh/jsvpn/jsproxy@dev/baitai/20200329/1302338.md
 ```
+ermaozi
+
+clash订阅链接：https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+
+v2ray订阅链接：https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+
 
