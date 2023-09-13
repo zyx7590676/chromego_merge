@@ -31,7 +31,7 @@ https://mareep.netlify.app/sub/merged_warp_proxies.yaml
 ```
 ### shadowrocket订阅链接
 ```
-https://mareep.netlify.app//sub/shadowrocket_base64.txt
+https://mareep.netlify.app/sub/shadowrocket_base64.txt
 ```
 
 ## 订阅链接分享（需要翻墙版-托管自github）
