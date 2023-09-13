@@ -99,56 +99,57 @@ proxies:
     public-key: S6ycbWYBM6WB-5SzRQSwVTFHF6v4BUHQf0Rus5B7KG0
   client-fingerprint: chrome
 - name: meta71
-  type: vless
-  server: 45.150.165.61
-  port: 15967
-  udp: true
-  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
-  tls: true
-  servername: www.lovelive-anime.jp
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
-  client-fingerprint: chrome
+  type: hysteria
+  server: 108.181.17.116
+  port: 54703
+  47000-48000: null
+  sni: www.microsoft.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: J6LqWv5zrUwWGuVHeZt4i3hu8LW17GKqXCh0kE096ILzaioTCQ
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: meta81
   type: vless
   server: 45.150.165.61
-  port: 15967
+  port: 25678
   udp: true
-  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
+  uuid: 34f36b97-1fb7-41f3-8db4-912cc69e724a
   tls: true
-  servername: www.lovelive-anime.jp
+  servername: itunes.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
+    public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
 - name: meta91
   type: vless
   server: 45.150.165.61
-  port: 15967
+  port: 25678
   udp: true
-  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
+  uuid: 34f36b97-1fb7-41f3-8db4-912cc69e724a
   tls: true
-  servername: www.lovelive-anime.jp
+  servername: itunes.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
+    public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
 - name: meta101
   type: vless
   server: 45.150.165.61
-  port: 15967
+  port: 25678
   udp: true
-  uuid: c4ca3219-2e93-435f-98d6-c1bb314193fc
+  uuid: 34f36b97-1fb7-41f3-8db4-912cc69e724a
   tls: true
-  servername: www.lovelive-anime.jp
+  servername: itunes.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: DLZ9UW94ANwhyvB6hrEGZgRgqTdqN6Lobxh54ksIn1Y
+    public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
