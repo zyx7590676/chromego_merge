@@ -113,18 +113,17 @@ proxies:
   down: 55
   hop_interval: 10
 - name: meta81
-  type: vless
-  server: 45.150.165.61
-  port: 25678
-  udp: true
-  uuid: 34f36b97-1fb7-41f3-8db4-912cc69e724a
-  tls: true
-  servername: itunes.apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
-  client-fingerprint: chrome
+  type: hysteria
+  server: www.dtku50.xyz
+  port: 43250
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
+  up: 11
+  down: 55
 - name: meta91
   type: vless
   server: 45.150.165.61
@@ -140,16 +139,16 @@ proxies:
   client-fingerprint: chrome
 - name: meta101
   type: vless
-  server: 45.150.165.61
-  port: 25678
+  server: www.dtku49.xyz
+  port: 18113
   udp: true
-  uuid: 34f36b97-1fb7-41f3-8db4-912cc69e724a
+  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
   tls: true
-  servername: itunes.apple.com
+  servername: s0.awsstatic.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
+    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
   client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
