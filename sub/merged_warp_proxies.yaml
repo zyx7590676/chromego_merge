@@ -39,18 +39,19 @@ proxies:
   - 8.8.8.8
   dialer-proxy: WARP前置节点
 - name: meta11
-  type: vless
+  type: hysteria
   server: 108.181.18.187
-  port: 443
-  udp: true
-  uuid: cb26c708-2cbb-4cad-b66d-d7e39808dfad
-  tls: true
-  servername: addons.mozilla.org
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: ipkaULYBqXoRYrNMFDayyc_kFta1POlXisjhHbzZxy4
-  client-fingerprint: chrome
+  port: 26363
+  47000-48000: null
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: EmdaoxF80PelBi5vipsOqyQLqIK4QTXzQwhN34uP5i5wJLea4f
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: meta21
   type: vless
   server: 108.181.22.130
