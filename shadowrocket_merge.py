@@ -135,7 +135,6 @@ try:
                 reality = f"vless://{uuid}@{server}:{port}?security=reality&flow={flow}&&type={network}&fp={fingerprint}&pbk={publicKey}&sni={serverName}&spx={spx}&sid={shortId}&serviceName={serviceName}#REALITY{index}"
             else:
                 print(f"其他协议还未支持 URL {url}")
-                reality = ""
                 continue
             
             # 将当前proxy字典添加到所有proxies列表中
@@ -209,6 +208,21 @@ try:
                     # 生成URL
                     hysteria_meta = f"hysteria://{server}:{port}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={mport}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria{index}"
                     merged_proxies.append(hysteria_meta)
+                elif proxy['type'] == 'ssr':
+                    server = proxy["server"]           
+                    port = proxy["port"]
+                    password = proxy["password"]
+                    password = base64.b64encode(password.encode()).decode()
+                    cipher = proxy["cipher"]
+                    obfs = proxy["obfs"]
+                    protocol = proxy["protocol"]
+
+                    # 生成URL
+                    ssr_source=f"{server}:{port}:{protocol}:{cipher}:{obfs}:{password}/?remarks=&protoparam=&obfsparam="
+                    
+                    ssr_source=base64.b64encode(ssr_source.encode()).decode()
+                    ssr_meta = f"ssr://{ssr_source}"
+                    merged_proxies.append(ssr_meta)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
 except Exception as e:
