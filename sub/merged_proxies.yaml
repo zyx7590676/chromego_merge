@@ -46,27 +46,27 @@ proxies:
   protocol: auth_chain_a
 - name: meta41
   type: ssr
-  server: 108.181.18.187
-  port: 11111
+  server: 185.22.153.124
+  port: 20022
   password: dongtaiwang.com
-  cipher: dummy
-  obfs: http_simple
-  protocol: auth_chain_a
+  cipher: aes-256-cfb
+  obfs: http_post
+  protocol: auth_aes128_md5
 - name: meta51
   type: ssr
-  server: www.dtku49.xyz
-  port: 11111
+  server: www.dtku50.xyz
+  port: 30033
   password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+  cipher: none
+  obfs: random_head
+  protocol: auth_chain_b
 - name: meta61
   type: ssr
-  server: www.dtku49.xyz
-  port: 11111
+  server: 45.150.165.79
+  port: 10011
   password: dongtaiwang.com
   cipher: dummy
-  obfs: plain
+  obfs: tls1.2_ticket_auth
   protocol: auth_chain_a
 - name: meta71
   type: hysteria
