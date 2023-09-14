@@ -53,70 +53,75 @@ proxies:
   down: 55
   hop_interval: 10
 - name: meta21
-  type: vless
+  type: hysteria
   server: 108.181.22.130
-  port: 17768
-  udp: true
-  uuid: ddf498c9-9ded-4f04-8f8c-22737e13f18a
-  tls: true
-  servername: www.lovelive-anime.jp
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: yQ6_r7lGEwNA20d4wdcMtbll75rH3Hv7W74Nn_503Cs
-  client-fingerprint: chrome
+  port: 32911
+  47000-48000: null
+  sni: www.bilibili.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: va9d6B3o4AmT9Svo9cY38935LiNk6PeJjmzB58iDGpYyHctbhv
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: meta31
-  type: vless
+  type: hysteria
   server: 185.22.153.124
-  port: 34562
-  udp: true
-  uuid: 1aebdc19-0794-40c8-98fd-ed4eb69aa596
-  tls: true
-  servername: itunes.apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: DL3tRdvx41PM2ia5va65Arz9iadqDgF9DXbfpuYa-Qc
-  client-fingerprint: chrome
+  port: 27688
+  47000-48000: null
+  sni: youku.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: meta41
-  type: vless
+  type: hysteria
   server: 185.22.153.124
-  port: 34562
-  udp: true
-  uuid: 1aebdc19-0794-40c8-98fd-ed4eb69aa596
-  tls: true
-  servername: itunes.apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: DL3tRdvx41PM2ia5va65Arz9iadqDgF9DXbfpuYa-Qc
-  client-fingerprint: chrome
+  port: 27688
+  47000-48000: null
+  sni: youku.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: meta51
-  type: vless
-  server: 166.1.18.191
-  port: 10489
-  udp: true
-  uuid: f25e53a6-1694-45c5-8011-9aac6a58c6da
-  tls: true
-  servername: gateway.icloud.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: hTq0VT11aaSIhEJBSwG058LquoM-sKZAMGPlWcIsaR0
-  client-fingerprint: chrome
+  type: hysteria
+  server: 185.22.153.124
+  port: 27688
+  47000-48000: null
+  sni: youku.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: meta61
-  type: vless
+  type: hysteria
   server: 108.181.22.139
-  port: 10982
-  udp: true
-  uuid: 3f4c685d-23c8-4236-8c72-598f36c89930
-  tls: true
-  servername: www.nokia.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: S6ycbWYBM6WB-5SzRQSwVTFHF6v4BUHQf0Rus5B7KG0
-  client-fingerprint: chrome
+  port: 40527
+  10000-20000: null
+  sni: baidu.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: GBfoCSHkcq55vZV3bakcVY51Y4jtfbHHikM037OkS8T2Z2Qtqb
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: meta71
   type: hysteria
   server: 108.181.17.116
@@ -157,18 +162,13 @@ proxies:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
 - name: meta101
-  type: vless
+  type: ssr
   server: www.dtku49.xyz
-  port: 18113
-  udp: true
-  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
-  tls: true
-  servername: s0.awsstatic.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
-  client-fingerprint: chrome
+  port: 11111
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: plain
+  protocol: auth_chain_a
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
