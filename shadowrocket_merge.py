@@ -202,7 +202,7 @@ try:
                     alpn = proxy["alpn"][0]
                     # insecure = proxy["skip-cert-verify"]
                     obfs = ""
-                    insecure = 1
+                    insecure = int(proxy["skip-cert-verify"])
                     server_name = proxy["sni"]
                     fast_open = 1
                     auth = proxy["auth_str"]
