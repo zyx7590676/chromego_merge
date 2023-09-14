@@ -10,12 +10,7 @@ vless://9e2626df-3467-4393-9f7c-aaca6fe4336c@173.234.25.51:29295?security=realit
 vless://40ccefc6-35da-4e64-8a60-7c98671debb7@45.140.168.221:443?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=9UVYudHsbabswlvOuDRMweSC31_qhToDx4_QDIf-oGk&sni=d1.awsstatic.com&spx=&sid=#REALITY1
 vless://5e4efe94-b4f5-47d7-bc12-f1f1e4ef7f72@45.129.2.15:24515?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=HMlkLQGbE-XvrwExv46WToHNmkg8o_XQ5UsKZ_E09DA&sni=mensura.cdn-apple.com&spx=&sid=#REALITY2
 vless://40ccefc6-35da-4e64-8a60-7c98671debb7@45.140.168.221:443?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=9UVYudHsbabswlvOuDRMweSC31_qhToDx4_QDIf-oGk&sni=d1.awsstatic.com&spx=&sid=#REALITY3
-hysteria://108.181.18.187:26363?peer=bing.com&auth=EmdaoxF80PelBi5vipsOqyQLqIK4QTXzQwhN34uP5i5wJLea4f&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=26363&obfs=&protocol=udp&fastopen=1#hysteria0
-hysteria://108.181.22.130:32911?peer=www.bilibili.com&auth=va9d6B3o4AmT9Svo9cY38935LiNk6PeJjmzB58iDGpYyHctbhv&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=32911&obfs=&protocol=udp&fastopen=1#hysteria1
-hysteria://185.22.153.124:27688?peer=youku.com&auth=YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=27688&obfs=&protocol=udp&fastopen=1#hysteria2
-hysteria://185.22.153.124:27688?peer=youku.com&auth=YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=27688&obfs=&protocol=udp&fastopen=1#hysteria3
-hysteria://185.22.153.124:27688?peer=youku.com&auth=YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=27688&obfs=&protocol=udp&fastopen=1#hysteria4
-hysteria://108.181.22.139:40527?peer=baidu.com&auth=GBfoCSHkcq55vZV3bakcVY51Y4jtfbHHikM037OkS8T2Z2Qtqb&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=40527&obfs=&protocol=udp&fastopen=1#hysteria5
 hysteria://108.181.17.116:54703?peer=www.microsoft.com&auth=J6LqWv5zrUwWGuVHeZt4i3hu8LW17GKqXCh0kE096ILzaioTCQ&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=54703&obfs=&protocol=udp&fastopen=1#hysteria6
 hysteria://www.dtku50.xyz:43250?peer=bing.com&auth=2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7&insecure=1&upmbps=11&downmbps=55&alpn=h3&mport=43250&obfs=&protocol=udp&fastopen=1#hysteria7
 vless://34f36b97-1fb7-41f3-8db4-912cc69e724a@45.150.165.61:25678?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc&sni=itunes.apple.com#reality_meta8
+vless://1a66f4f9-00b8-460e-b02e-17b2eaa9eae5@www.dtku49.xyz:18113?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE&sni=s0.awsstatic.com#reality_meta9

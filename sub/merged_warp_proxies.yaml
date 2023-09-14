@@ -39,89 +39,53 @@ proxies:
   - 8.8.8.8
   dialer-proxy: WARP前置节点
 - name: meta11
-  type: hysteria
+  type: ssr
   server: 108.181.18.187
-  port: 26363
-  47000-48000: null
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: EmdaoxF80PelBi5vipsOqyQLqIK4QTXzQwhN34uP5i5wJLea4f
-  up: 11
-  down: 55
-  hop_interval: 10
+  port: 11111
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: http_simple
+  protocol: auth_chain_a
 - name: meta21
-  type: hysteria
-  server: 108.181.22.130
-  port: 32911
-  47000-48000: null
-  sni: www.bilibili.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: va9d6B3o4AmT9Svo9cY38935LiNk6PeJjmzB58iDGpYyHctbhv
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: ssr
+  server: www.dtku49.xyz
+  port: 11111
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: plain
+  protocol: auth_chain_a
 - name: meta31
-  type: hysteria
-  server: 185.22.153.124
-  port: 27688
-  47000-48000: null
-  sni: youku.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: ssr
+  server: 108.181.18.187
+  port: 11111
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: http_simple
+  protocol: auth_chain_a
 - name: meta41
-  type: hysteria
-  server: 185.22.153.124
-  port: 27688
-  47000-48000: null
-  sni: youku.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: ssr
+  server: 108.181.18.187
+  port: 11111
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: http_simple
+  protocol: auth_chain_a
 - name: meta51
-  type: hysteria
-  server: 185.22.153.124
-  port: 27688
-  47000-48000: null
-  sni: youku.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: YL7nbqD0HgBiVBGGXgxFp5eJbPYvgz0NfaERCZa95sRKWDz4cA
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: ssr
+  server: www.dtku49.xyz
+  port: 11111
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: plain
+  protocol: auth_chain_a
 - name: meta61
-  type: hysteria
-  server: 108.181.22.139
-  port: 40527
-  10000-20000: null
-  sni: baidu.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: GBfoCSHkcq55vZV3bakcVY51Y4jtfbHHikM037OkS8T2Z2Qtqb
-  up: 11
-  down: 55
-  hop_interval: 10
+  type: ssr
+  server: www.dtku49.xyz
+  port: 11111
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: plain
+  protocol: auth_chain_a
 - name: meta71
   type: hysteria
   server: 108.181.17.116
@@ -162,13 +126,18 @@ proxies:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
 - name: meta101
-  type: ssr
+  type: vless
   server: www.dtku49.xyz
-  port: 11111
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+  port: 18113
+  udp: true
+  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  tls: true
+  servername: s0.awsstatic.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+  client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
