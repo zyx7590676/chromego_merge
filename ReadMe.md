@@ -27,7 +27,6 @@ https://mareep.netlify.app/sub/merged_proxies.yaml
 ### 套warp版本（clashmeta
 ```
 https://mareep.netlify.app/sub/merged_warp_proxies.yaml
-
 ```
 ### shadowrocket订阅链接
 ```
@@ -45,7 +44,6 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_proxies.
 ### 套warp版本（clashmeta
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_warp_proxies.yaml
-
 ```
 ### shadowrocket订阅链接
 ```
