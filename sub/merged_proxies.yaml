@@ -21,13 +21,18 @@ proxies:
   sni: gw.alicdn.com
   skip-cert-verify: true
 - name: meta11
-  type: ssr
+  type: vless
   server: www.dtku50.xyz
-  port: 30033
-  password: dongtaiwang.com
-  cipher: none
-  obfs: random_head
-  protocol: auth_chain_b
+  port: 12282
+  udp: true
+  uuid: 0d4b1986-5258-4c4f-8578-555fafffa761
+  tls: true
+  servername: player.live-video.net
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU
+  client-fingerprint: chrome
 - name: meta21
   type: ssr
   server: www.dtku49.xyz
@@ -37,13 +42,18 @@ proxies:
   obfs: plain
   protocol: auth_chain_a
 - name: meta31
-  type: ssr
-  server: 108.181.18.187
-  port: 11111
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: http_simple
-  protocol: auth_chain_a
+  type: vless
+  server: www.dtku49.xyz
+  port: 18113
+  udp: true
+  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  tls: true
+  servername: s0.awsstatic.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+  client-fingerprint: chrome
 - name: meta41
   type: ssr
   server: www.dtku50.xyz
@@ -53,21 +63,31 @@ proxies:
   obfs: random_head
   protocol: auth_chain_b
 - name: meta51
-  type: ssr
+  type: vless
   server: www.dtku50.xyz
-  port: 30033
-  password: dongtaiwang.com
-  cipher: none
-  obfs: random_head
-  protocol: auth_chain_b
+  port: 12282
+  udp: true
+  uuid: 0d4b1986-5258-4c4f-8578-555fafffa761
+  tls: true
+  servername: player.live-video.net
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU
+  client-fingerprint: chrome
 - name: meta61
-  type: ssr
+  type: vless
   server: www.dtku50.xyz
-  port: 30033
-  password: dongtaiwang.com
-  cipher: none
-  obfs: random_head
-  protocol: auth_chain_b
+  port: 12282
+  udp: true
+  uuid: 0d4b1986-5258-4c4f-8578-555fafffa761
+  tls: true
+  servername: player.live-video.net
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU
+  client-fingerprint: chrome
 - name: meta71
   type: vless
   server: www.dtku49.xyz
