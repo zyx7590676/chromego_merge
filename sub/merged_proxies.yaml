@@ -42,19 +42,6 @@ proxies:
   obfs: plain
   protocol: auth_chain_a
 - name: meta31
-  type: vless
-  server: www.dtku48.xyz
-  port: 21311
-  udp: true
-  uuid: 7932dd18-e44d-412b-aa82-fd08c43722b6
-  tls: true
-  servername: lol.secure.dyn.riotcdn.net
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: naENg9--C7tTN3haq8uB2oms-rdhNAasktPg_v24wmo
-  client-fingerprint: chrome
-- name: meta41
   type: ssr
   server: www.dtku50.xyz
   port: 30033
@@ -62,32 +49,46 @@ proxies:
   cipher: none
   obfs: random_head
   protocol: auth_chain_b
+- name: meta41
+  type: ssr
+  server: www.dtku48.xyz
+  port: 10003
+  password: dongtaiwang.com
+  cipher: none
+  obfs: plain
+  protocol: auth_chain_a
+- name: meta42
+  type: ssr
+  server: www.dtku48.xyz
+  port: 10004
+  password: dongtaiwang.com
+  cipher: none
+  obfs: plain
+  protocol: auth_chain_a
+- name: meta43
+  type: ssr
+  server: www.dtku48.xyz
+  port: 10005
+  password: dongtaiwang.com
+  cipher: none
+  obfs: random_head
+  protocol: auth_chain_b
 - name: meta51
-  type: vless
-  server: www.dtku50.xyz
-  port: 12282
-  udp: true
-  uuid: 0d4b1986-5258-4c4f-8578-555fafffa761
-  tls: true
-  servername: player.live-video.net
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU
-  client-fingerprint: chrome
+  type: ssr
+  server: www.dtku49.xyz
+  port: 11112
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: plain
+  protocol: auth_chain_a
 - name: meta61
-  type: vless
-  server: www.dtku50.xyz
-  port: 12282
-  udp: true
-  uuid: 0d4b1986-5258-4c4f-8578-555fafffa761
-  tls: true
-  servername: player.live-video.net
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU
-  client-fingerprint: chrome
+  type: ssr
+  server: www.dtku48.xyz
+  port: 10001
+  password: dongtaiwang.com
+  cipher: none
+  obfs: plain
+  protocol: auth_chain_a
 - name: meta71
   type: vless
   server: www.dtku49.xyz
@@ -262,6 +263,8 @@ proxy-groups:
   - meta21
   - meta31
   - meta41
+  - meta42
+  - meta43
   - meta51
   - meta61
   - meta71
@@ -287,6 +290,8 @@ proxy-groups:
   - meta21
   - meta31
   - meta41
+  - meta42
+  - meta43
   - meta51
   - meta61
   - meta71
