@@ -39,18 +39,19 @@ proxies:
   - 8.8.8.8
   dialer-proxy: WARP前置节点
 - name: meta11
-  type: vless
-  server: www.dtku50.xyz
-  port: 12282
-  udp: true
-  uuid: 0d4b1986-5258-4c4f-8578-555fafffa761
-  tls: true
-  servername: player.live-video.net
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU
-  client-fingerprint: chrome
+  type: hysteria
+  server: 108.181.22.131
+  port: 32296
+  34500-34600: null
+  sni: qq.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: VZENlctKGivNmryU7Rb4spM8gBf7snyrA1NLfLHeM9roGWaEgS
+  up: 2
+  down: 8
+  hop_interval: 600
 - name: meta21
   type: ssr
   server: www.dtku49.xyz
@@ -77,8 +78,8 @@ proxies:
   - h3
   protocol: udp
   auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
-  up: 11
-  down: 55
+  up: 2
+  down: 10
 - name: meta51
   type: ssr
   server: www.dtku49.xyz
@@ -118,8 +119,8 @@ proxies:
   - h3
   protocol: udp
   auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
-  up: 11
-  down: 55
+  up: 2
+  down: 10
 - name: meta91
   type: vless
   server: 45.150.165.61
