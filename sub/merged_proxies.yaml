@@ -50,29 +50,17 @@ proxies:
   obfs: random_head
   protocol: auth_chain_b
 - name: meta41
-  type: ssr
+  type: hysteria
   server: www.dtku48.xyz
-  port: 10003
-  password: dongtaiwang.com
-  cipher: none
-  obfs: plain
-  protocol: auth_chain_a
-- name: meta42
-  type: ssr
-  server: www.dtku48.xyz
-  port: 10004
-  password: dongtaiwang.com
-  cipher: none
-  obfs: plain
-  protocol: auth_chain_a
-- name: meta43
-  type: ssr
-  server: www.dtku48.xyz
-  port: 10005
-  password: dongtaiwang.com
-  cipher: none
-  obfs: random_head
-  protocol: auth_chain_b
+  port: 31402
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
+  up: 11
+  down: 55
 - name: meta51
   type: ssr
   server: www.dtku49.xyz
@@ -263,8 +251,6 @@ proxy-groups:
   - meta21
   - meta31
   - meta41
-  - meta42
-  - meta43
   - meta51
   - meta61
   - meta71
@@ -290,8 +276,6 @@ proxy-groups:
   - meta21
   - meta31
   - meta41
-  - meta42
-  - meta43
   - meta51
   - meta61
   - meta71
