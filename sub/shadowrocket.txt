@@ -12,7 +12,7 @@ vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reali
 vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE&sni=mensura.cdn-apple.com&spx=&sid=#REALITY3
 vless://0d4b1986-5258-4c4f-8578-555fafffa761@www.dtku50.xyz:12282?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU&sni=player.live-video.net#reality_meta0
 ssr://d3d3LmR0a3U0OS54eXo6MTExMTE6YXV0aF9jaGFpbl9hOmR1bW15OnBsYWluOlpHOXVaM1JoYVhkaGJtY3VZMjl0Lz9yZW1hcmtzPSZwcm90b3BhcmFtPSZvYmZzcGFyYW09
-vless://1a66f4f9-00b8-460e-b02e-17b2eaa9eae5@www.dtku49.xyz:18113?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE&sni=s0.awsstatic.com#reality_meta2
+vless://7932dd18-e44d-412b-aa82-fd08c43722b6@www.dtku48.xyz:21311?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=naENg9--C7tTN3haq8uB2oms-rdhNAasktPg_v24wmo&sni=lol.secure.dyn.riotcdn.net#reality_meta2
 ssr://d3d3LmR0a3U1MC54eXo6MzAwMzM6YXV0aF9jaGFpbl9iOm5vbmU6cmFuZG9tX2hlYWQ6Wkc5dVozUmhhWGRoYm1jdVkyOXQvP3JlbWFya3M9JnByb3RvcGFyYW09Jm9iZnNwYXJhbT0=
 vless://0d4b1986-5258-4c4f-8578-555fafffa761@www.dtku50.xyz:12282?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU&sni=player.live-video.net#reality_meta4
 vless://0d4b1986-5258-4c4f-8578-555fafffa761@www.dtku50.xyz:12282?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=YP9Bsfjub0ziDCQVIFunSyL3CATmR8TbrYC_enJDqGU&sni=player.live-video.net#reality_meta5

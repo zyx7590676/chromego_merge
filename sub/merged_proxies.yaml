@@ -43,16 +43,16 @@ proxies:
   protocol: auth_chain_a
 - name: meta31
   type: vless
-  server: www.dtku49.xyz
-  port: 18113
+  server: www.dtku48.xyz
+  port: 21311
   udp: true
-  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  uuid: 7932dd18-e44d-412b-aa82-fd08c43722b6
   tls: true
-  servername: s0.awsstatic.com
+  servername: lol.secure.dyn.riotcdn.net
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+    public-key: naENg9--C7tTN3haq8uB2oms-rdhNAasktPg_v24wmo
   client-fingerprint: chrome
 - name: meta41
   type: ssr
