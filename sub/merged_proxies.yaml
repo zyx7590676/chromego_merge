@@ -20,7 +20,7 @@ proxies:
   udp: true
   sni: gw.alicdn.com
   skip-cert-verify: true
-- name: meta01
+- name: mhysteria01
   type: hysteria
   server: 108.181.22.131
   port: 32296
@@ -34,15 +34,7 @@ proxies:
   up: 30
   down: 80
   hop_interval: 600
-- name: meta11
-  type: ssr
-  server: 108.181.18.187
-  port: 11111
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: http_simple
-  protocol: auth_chain_a
-- name: meta21
+- name: mssr11
   type: ssr
   server: www.dtku49.xyz
   port: 11111
@@ -50,23 +42,7 @@ proxies:
   cipher: dummy
   obfs: plain
   protocol: auth_chain_a
-- name: meta31
-  type: ssr
-  server: 108.181.18.187
-  port: 11111
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: http_simple
-  protocol: auth_chain_a
-- name: meta41
-  type: ssr
-  server: 185.22.153.124
-  port: 20022
-  password: dongtaiwang.com
-  cipher: aes-256-cfb
-  obfs: http_post
-  protocol: auth_aes128_md5
-- name: meta51
+- name: mssr21
   type: ssr
   server: www.dtku50.xyz
   port: 30033
@@ -74,15 +50,7 @@ proxies:
   cipher: none
   obfs: random_head
   protocol: auth_chain_b
-- name: meta61
-  type: ssr
-  server: 45.150.165.79
-  port: 10011
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: tls1.2_ticket_auth
-  protocol: auth_chain_a
-- name: meta71
+- name: mhysteria31
   type: hysteria
   server: www.dtku48.xyz
   port: 31402
@@ -91,11 +59,39 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  auth_str: J6LqWv5zrUwWGuVHeZt4i3hu8LW17GKqXCh0kE096ILzaioTCQ
-  up: 11
-  down: 55
-  hop_interval: 10
-- name: meta81
+  auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
+  up: 30
+  down: 80
+- name: mssr41
+  type: ssr
+  server: www.dtku49.xyz
+  port: 11112
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: plain
+  protocol: auth_chain_a
+- name: mssr51
+  type: ssr
+  server: www.dtku48.xyz
+  port: 10001
+  password: dongtaiwang.com
+  cipher: none
+  obfs: plain
+  protocol: auth_chain_a
+- name: mvless61
+  type: vless
+  server: www.dtku49.xyz
+  port: 18113
+  udp: true
+  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  tls: true
+  servername: s0.awsstatic.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+  client-fingerprint: chrome
+- name: mhysteria71
   type: hysteria
   server: www.dtku50.xyz
   port: 43250
@@ -105,9 +101,9 @@ proxies:
   - h3
   protocol: udp
   auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
-  up: 11
-  down: 55
-- name: meta91
+  up: 30
+  down: 80
+- name: mvless81
   type: vless
   server: 45.150.165.61
   port: 25678
@@ -120,7 +116,7 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: meta91
+- name: mvless91
   type: vless
   server: www.dtku49.xyz
   port: 18113
@@ -252,16 +248,16 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - 油管-绵阿羊
-  - meta01
-  - meta11
-  - meta21
-  - meta31
-  - meta41
-  - meta51
-  - meta61
-  - meta71
-  - meta81
-  - meta91
+  - mhysteria01
+  - mssr11
+  - mssr21
+  - mhysteria31
+  - mssr41
+  - mssr51
+  - mvless61
+  - mhysteria71
+  - mvless81
+  - mvless91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -277,16 +273,16 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - meta01
-  - meta11
-  - meta21
-  - meta31
-  - meta41
-  - meta51
-  - meta61
-  - meta71
-  - meta81
-  - meta91
+  - mhysteria01
+  - mssr11
+  - mssr21
+  - mhysteria31
+  - mssr41
+  - mssr51
+  - mvless61
+  - mhysteria71
+  - mvless81
+  - mvless91
   - hysteria0
   - hysteria1
   - hysteria2
