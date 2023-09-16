@@ -20,15 +20,21 @@ proxies:
   udp: true
   sni: gw.alicdn.com
   skip-cert-verify: true
+- name: meta01
+  type: hysteria
+  server: 108.181.22.131
+  port: 32296
+  34500-34600: null
+  sni: qq.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: VZENlctKGivNmryU7Rb4spM8gBf7snyrA1NLfLHeM9roGWaEgS
+  up: 30
+  down: 80
+  hop_interval: 600
 - name: meta11
-  type: ssr
-  server: 108.181.18.187
-  port: 11111
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: http_simple
-  protocol: auth_chain_a
-- name: meta21
   type: ssr
   server: www.dtku49.xyz
   port: 11111
@@ -36,23 +42,7 @@ proxies:
   cipher: dummy
   obfs: plain
   protocol: auth_chain_a
-- name: meta31
-  type: ssr
-  server: 108.181.18.187
-  port: 11111
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: http_simple
-  protocol: auth_chain_a
-- name: meta41
-  type: ssr
-  server: 185.22.153.124
-  port: 20022
-  password: dongtaiwang.com
-  cipher: aes-256-cfb
-  obfs: http_post
-  protocol: auth_aes128_md5
-- name: meta51
+- name: meta21
   type: ssr
   server: www.dtku50.xyz
   port: 30033
@@ -60,29 +50,48 @@ proxies:
   cipher: none
   obfs: random_head
   protocol: auth_chain_b
-- name: meta61
-  type: ssr
-  server: 45.150.165.79
-  port: 10011
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: tls1.2_ticket_auth
-  protocol: auth_chain_a
-- name: meta71
+- name: meta31
   type: hysteria
-  server: 108.181.17.116
-  port: 54703
-  47000-48000: null
-  sni: www.microsoft.com
+  server: www.dtku48.xyz
+  port: 31402
+  sni: bing.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: J6LqWv5zrUwWGuVHeZt4i3hu8LW17GKqXCh0kE096ILzaioTCQ
-  up: 11
-  down: 55
-  hop_interval: 10
-- name: meta81
+  auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
+  up: 30
+  down: 80
+- name: meta41
+  type: ssr
+  server: www.dtku49.xyz
+  port: 11112
+  password: dongtaiwang.com
+  cipher: dummy
+  obfs: plain
+  protocol: auth_chain_a
+- name: meta51
+  type: ssr
+  server: www.dtku48.xyz
+  port: 10001
+  password: dongtaiwang.com
+  cipher: none
+  obfs: plain
+  protocol: auth_chain_a
+- name: meta61
+  type: vless
+  server: www.dtku49.xyz
+  port: 18113
+  udp: true
+  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  tls: true
+  servername: s0.awsstatic.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+  client-fingerprint: chrome
+- name: meta71
   type: hysteria
   server: www.dtku50.xyz
   port: 43250
@@ -92,9 +101,9 @@ proxies:
   - h3
   protocol: udp
   auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
-  up: 11
-  down: 55
-- name: meta91
+  up: 30
+  down: 80
+- name: meta81
   type: vless
   server: 45.150.165.61
   port: 25678
@@ -107,7 +116,7 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: meta101
+- name: meta91
   type: vless
   server: www.dtku49.xyz
   port: 18113
@@ -150,10 +159,10 @@ proxies:
   - h3
 - name: hysteria2
   type: hysteria
-  server: 166.1.18.191
-  port: 16542
-  ports: 21000-22000
-  auth_str: PidedzMQ9WgikepaWKUdAaC2hLDFqxK5z1Aw19dxAluufRwpll
+  server: 173.234.25.52
+  port: 20164
+  ports: 20164
+  auth_str: Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F
   up: 11
   down: 55
   fast-open: true
@@ -192,23 +201,9 @@ proxies:
     short-id: ''
 - name: reality1
   type: vless
-  server: 45.140.168.221
-  port: 443
-  uuid: 40ccefc6-35da-4e64-8a60-7c98671debb7
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: d1.awsstatic.com
-  reality-opts:
-    public-key: 9UVYudHsbabswlvOuDRMweSC31_qhToDx4_QDIf-oGk
-    short-id: ''
-- name: reality2
-  type: vless
-  server: 45.129.2.15
-  port: 24515
-  uuid: 5e4efe94-b4f5-47d7-bc12-f1f1e4ef7f72
+  server: 108.181.22.140
+  port: 23694
+  uuid: 024fcb50-d42c-47b4-8662-329e7b50b748
   network: tcp
   tls: true
   udp: true
@@ -216,21 +211,35 @@ proxies:
   client-fingerprint: chrome
   servername: mensura.cdn-apple.com
   reality-opts:
-    public-key: HMlkLQGbE-XvrwExv46WToHNmkg8o_XQ5UsKZ_E09DA
+    public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
     short-id: ''
-- name: reality3
+- name: reality2
   type: vless
-  server: 45.140.168.221
-  port: 443
-  uuid: 40ccefc6-35da-4e64-8a60-7c98671debb7
+  server: 108.181.22.140
+  port: 23694
+  uuid: 024fcb50-d42c-47b4-8662-329e7b50b748
   network: tcp
   tls: true
   udp: true
   flow: xtls-rprx-vision
   client-fingerprint: chrome
-  servername: d1.awsstatic.com
+  servername: mensura.cdn-apple.com
   reality-opts:
-    public-key: 9UVYudHsbabswlvOuDRMweSC31_qhToDx4_QDIf-oGk
+    public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
+    short-id: ''
+- name: reality3
+  type: vless
+  server: 108.181.22.140
+  port: 23694
+  uuid: 024fcb50-d42c-47b4-8662-329e7b50b748
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: mensura.cdn-apple.com
+  reality-opts:
+    public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
     short-id: ''
 proxy-groups:
 - name: 节点选择
@@ -239,6 +248,7 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - 油管-绵阿羊
+  - meta01
   - meta11
   - meta21
   - meta31
@@ -248,7 +258,6 @@ proxy-groups:
   - meta71
   - meta81
   - meta91
-  - meta101
   - hysteria0
   - hysteria1
   - hysteria2
@@ -264,6 +273,7 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
+  - meta01
   - meta11
   - meta21
   - meta31
@@ -273,7 +283,6 @@ proxy-groups:
   - meta71
   - meta81
   - meta91
-  - meta101
   - hysteria0
   - hysteria1
   - hysteria2

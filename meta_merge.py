@@ -24,8 +24,10 @@ try:
 
             # 修改proxies数组中的每个代理项的'name'属性为序号
             for i, proxy in enumerate(proxies):
-                proxy['name'] = "meta"+str(index + 1)+str(i + 1 )
-
+                proxy['name'] = "m"+proxy['type']+str(index)+str(i + 1 )
+                if proxy['type'] == 'hysteria':
+                    proxy['up'] = 30
+                    proxy['down'] = 80
             merged_proxies.extend(proxies)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")

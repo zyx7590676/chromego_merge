@@ -78,8 +78,10 @@ try:
             # 提取字段值
             server = json_data["server"]
             protocol = json_data["protocol"]
-            up_mbps = json_data["up_mbps"]
-            down_mbps = json_data["down_mbps"]
+            # up_mbps = json_data["up_mbps"]
+            # down_mbps = json_data["down_mbps"]
+            up_mbps = 50
+            down_mbps = 100
             alpn = json_data["alpn"]
             obfs = json_data["obfs"]
             insecure = int(json_data["insecure"])
@@ -196,10 +198,11 @@ try:
                     ports = mport.split(",")
                     port = int(ports[0])
                     protocol = proxy["protocol"]
-                    up_mbps = proxy["up"]
-                    down_mbps = proxy["down"]
+                    # up_mbps = proxy["up"]
+                    # down_mbps = proxy["down"]
+                    up_mbps = 50
+                    down_mbps = 80                   
                     alpn = proxy["alpn"][0]
-                    # insecure = proxy["skip-cert-verify"]
                     obfs = ""
                     insecure = int(proxy["skip-cert-verify"])
                     server_name = proxy["sni"]
