@@ -32,7 +32,10 @@ https://mareep.netlify.app/sub/merged_warp_proxies.yaml
 ```
 https://mareep.netlify.app/sub/shadowrocket_base64.txt
 ```
-
+### nekoray订阅链接
+```
+https://mareep.netlify.app/sub/neko_base64.txt
+```
 ## 订阅链接分享（需要翻墙版-托管自github）
 <details>
   <summary>点击展开/折叠</summary>
@@ -49,7 +52,10 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_warp_pro
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/shadowrocket_base64.txt
 ```
-
+### nekoray订阅链接
+```
+https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/neko_base64.txt
+```
 </details>
 
 

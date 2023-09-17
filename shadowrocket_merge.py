@@ -5,7 +5,7 @@ import yaml
 import codecs
 
 merged_proxies = []
-
+merged_proxies_neko = []
 try:
     with open("./urls/naiverproxy_urls.txt", "r") as file:
         urls = file.read().splitlines()
@@ -23,7 +23,9 @@ try:
             encoded_proxy = base64.b64encode(proxy_str.encode()).decode()
             # 添加前缀
             naiveproxy = "http2://" + encoded_proxy
+            naiveproxy_neko = f"naive+https://{proxy_str}"
             merged_proxies.append(naiveproxy)
+            merged_proxies_neko.append(naiveproxy_neko)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
 except Exception as e:
@@ -91,11 +93,36 @@ try:
             # 生成URL
             hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria{index}"
             merged_proxies.append(hysteria)
+            merged_proxies_neko.append(hysteria)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
 except Exception as e:
     print(f"Error reading file: {e}")
+try:
+    with open("./urls/hysteria2_urls.txt", "r") as file:
+        urls = file.read().splitlines()
 
+    # 遍历每个网址
+    for index, url in enumerate(urls):
+        try:
+            # 使用适当的方法从网址中获取内容，这里使用urllib库示例
+            response = urllib.request.urlopen(url)
+            data = response.read().decode("utf-8")
+            # 解析JSON数据
+            json_data = json.loads(data)
+
+            # 提取字段值
+            server = json_data["server"]
+            insecure = int(json_data["tls"]["insecure"])
+            sni = json_data["tls"]["sni"]
+            auth = json_data["auth"]
+            # 生成URL
+            hysteria2 = f"hysteria2://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria{index}"
+            merged_proxies_neko.append(hysteria2)
+        except Exception as e:
+            print(f"Error processing URL {url}: {e}")
+except Exception as e:
+    print(f"Error reading file: {e}")
 # xray json reality节点处理
 try:
     with open("./urls/reality_urls.txt", "r") as file:
@@ -141,6 +168,7 @@ try:
             
             # 将当前proxy字典添加到所有proxies列表中
             merged_proxies.append(reality)
+            merged_proxies_neko.append(reality)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
 except Exception as e:
@@ -180,6 +208,7 @@ try:
                     fp = proxy['client-fingerprint']
                     reality_meta =  f"vless://{uuid}@{server}:{port}?security=reality&flow={flow}&type={network}&fp={fingerprint}&pbk={publicKey}&sni={serverName}#reality_meta{index}"
                     merged_proxies.append(reality_meta)
+                    merged_proxies_neko.append(reality_meta)
                 elif proxy['type'] == 'tuic':
                     server = proxy["server"]
                     port = proxy["port"]
@@ -192,6 +221,7 @@ try:
                     congestion =   proxy['congestion-controller']
                     tuic_meta = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure=1&alpn={alpn}&mode={udp_relay_mode}"
                     merged_proxies.append(tuic_meta)
+                    merged_proxies_neko.append(tuic_meta)
                 elif proxy['type'] == 'hysteria':
                     server = proxy["server"]           
                     mport = str(proxy["port"])
@@ -211,6 +241,7 @@ try:
                     # 生成URL
                     hysteria_meta = f"hysteria://{server}:{port}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={mport}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria{index}"
                     merged_proxies.append(hysteria_meta)
+                    merged_proxies_neko.append(hysteria_meta)
                 elif proxy['type'] == 'ssr':
                     server = proxy["server"]           
                     port = proxy["port"]
@@ -238,7 +269,13 @@ try:
             file.write(proxy + "\n")
 except Exception as e:
     print(f"Error writing to file: {e}")
-
+# 将结果写入文件
+try:
+    with open("./sub/neko.txt", "w") as file:
+        for proxy in merged_proxies_neko:
+            file.write(proxy + "\n")
+except Exception as e:
+    print(f"Error writing to file: {e}")
 
 try:
     with open("./sub/shadowrocket.txt", "r") as file:
@@ -246,6 +283,18 @@ try:
         encoded_content = base64.b64encode(content.encode("utf-8")).decode("utf-8")
     
     with open("./sub/shadowrocket_base64.txt", "w") as encoded_file:
+        encoded_file.write(encoded_content)
+        
+    print("Content successfully encoded and written to file.")
+except Exception as e:
+    print(f"Error encoding file content: {e}")
+
+try:
+    with open("./sub/neko.txt", "r") as file:
+        content = file.read()
+        encoded_content = base64.b64encode(content.encode("utf-8")).decode("utf-8")
+    
+    with open("./sub/neko_base64.txt", "w") as encoded_file:
         encoded_file.write(encoded_content)
         
     print("Content successfully encoded and written to file.")
