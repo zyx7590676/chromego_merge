@@ -1,7 +1,5 @@
 ## 简介
 
-Alvin9999这几天有时候一小时更新一次节点，我这个仓库是每六个小时爬一次的，所以有的节点可能会因为时间差导致无法使用
-
 **注意：clash内核无法使用这些节点，你要用clashmeta**
 
 提取并聚合chromego中的节点，并套上warp，让你感受白嫖加隐私的快乐体验，当然普通clash无法使用这些节点，我也不喜欢被别人抓取节点到免费节点池里
@@ -48,11 +46,11 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_proxies.
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_warp_proxies.yaml
 ```
-### shadowrocket订阅链接
+### shadowrocket订阅链接-ios客户端
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/shadowrocket_base64.txt
 ```
-### nekoray订阅链接
+### nekoray订阅链接-Windows客户端
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/neko_base64.txt
 ```
@@ -61,18 +59,6 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/neko_base64.txt
 
 ## 致谢
 [Alvin9999](https://github.com/Alvin9999/pac2/tree/master)
-
-
-## Chromego聚合说明
-| ChromeGo文件夹 | 协议 | 结果 | 备注 |
-|--------|--------|--------|--------|
-| clash.meta   | reality vision  | 已聚合（meta和小火箭）   |     | 
-| hysteria   | hysteria1   | 已聚合（meta和小火箭）   |     | 
-| xray   | reality grpc vision   | 已聚合（meta和小火箭）   |     | 
-| sing-box   | shadowtls  v1  | 已聚合(小火箭链接)   | clash-meta对v1的支持有问题导致并无法在clashmeta中使用，可以手动拿出节点放入小火箭使用，并且我不知道chromego为什么搞个v1版本，明明v2 v3早就出了.    | 
-| naiveproxy   | naiveproxy   | 已聚合（小火箭）   |  需要用shadowrocket   | 
-| psiphon   | 未知   | 未聚合   |  不知道是什么东西   | 
-| clashB v2go v2rayB   | 各种ss vmess   | 未聚合   |  又臭又长很多节点都已经失效   | 
 
 ## 其他订阅
 chromego中的clash节点(量很大，可用性未知)
