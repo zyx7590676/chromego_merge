@@ -4,10 +4,10 @@ hysteria://167.160.91.115:13928?peer=paypal.com&auth=BF0LL4L2jlqSdW3KxjQv81AiFFj
 hysteria://173.234.25.52:20164?peer=www.microsoft.com&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria1
 hysteria://173.234.25.52:20164?peer=www.microsoft.com&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria2
 hysteria://51.158.54.46:49139?peer=www.paypal.com&auth=dongtaiwang.com&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria3
-hysteria2://167.160.90.252:60930?peer=www.paypal.com&auth=fc4488ef&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria0
-hysteria2://167.160.90.252:60930?peer=www.paypal.com&auth=fc4488ef&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria1
-hysteria2://167.160.90.252:60930?peer=www.paypal.com&auth=fc4488ef&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria2
-hysteria2://167.160.90.252:60930?peer=www.paypal.com&auth=fc4488ef&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria3
+hysteria2://fc4488ef@167.160.90.252:60930?insecure=1&sni=www.bing.com#hysteria2_0
+hysteria2://fc4488ef@167.160.90.252:60930?insecure=1&sni=www.bing.com#hysteria2_1
+hysteria2://fc4488ef@167.160.90.252:60930?insecure=1&sni=www.bing.com#hysteria2_2
+hysteria2://fc4488ef@167.160.90.252:60930?insecure=1&sni=www.bing.com#hysteria2_3
 vless://9e2626df-3467-4393-9f7c-aaca6fe4336c@173.234.25.51:29295?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=LN86WNkTPKjU0rSHPg1X7TGZy1ba9vGwnt_MukdZOB8&sni=m.media-amazon.com&spx=&sid=#REALITY0
 vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE&sni=mensura.cdn-apple.com&spx=&sid=#REALITY1
 vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE&sni=mensura.cdn-apple.com&spx=&sid=#REALITY2
