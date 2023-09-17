@@ -14,7 +14,7 @@ vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reali
 vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE&sni=mensura.cdn-apple.com&spx=&sid=#REALITY3
 hysteria://108.181.22.131:32296?peer=qq.com&auth=VZENlctKGivNmryU7Rb4spM8gBf7snyrA1NLfLHeM9roGWaEgS&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=32296&obfs=&protocol=udp&fastopen=1#hysteria0
 hysteria://www.dtku48.xyz:31402?peer=bing.com&auth=9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=31402&obfs=&protocol=udp&fastopen=1#hysteria3
-hysteria://www.dtku48.xyz:31402?peer=bing.com&auth=9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=31402&obfs=&protocol=udp&fastopen=1#hysteria5
+tuic://tuic1.cfcdn3.xyz:65016?uuid=157c060e-7289-4fed-9154-00636029e064&version=5&password=157c060e-7289-4fed-9154-00636029e064&insecure=1&alpn=h3&mode=native
 vless://1a66f4f9-00b8-460e-b02e-17b2eaa9eae5@www.dtku49.xyz:18113?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE&sni=s0.awsstatic.com#reality_meta6
 hysteria://www.dtku50.xyz:43250?peer=bing.com&auth=2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=43250&obfs=&protocol=udp&fastopen=1#hysteria7
 vless://34f36b97-1fb7-41f3-8db4-912cc69e724a@45.150.165.61:25678?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc&sni=itunes.apple.com#reality_meta8

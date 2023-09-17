@@ -52,22 +52,18 @@ proxies:
   up: 30
   down: 80
   hop_interval: 600
-- name: mssr11
-  type: ssr
+- name: mss11
+  type: ss
   server: www.dtku49.xyz
-  port: 11111
+  port: 33333
   password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
-- name: mssr21
-  type: ssr
+  cipher: aes-256-gcm
+- name: mss21
+  type: ss
   server: www.dtku50.xyz
-  port: 30033
-  password: dongtaiwang.com
-  cipher: none
-  obfs: random_head
-  protocol: auth_chain_b
+  port: 40044
+  password: GigZ8tAuRg0OwkOWREohsE4gC/n2AqPsHrOsWR4GKfY=
+  cipher: aes-256-gcm
 - name: mhysteria31
   type: hysteria
   server: www.dtku48.xyz
@@ -80,26 +76,25 @@ proxies:
   auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
   up: 30
   down: 80
-- name: mssr41
-  type: ssr
-  server: www.dtku49.xyz
-  port: 11112
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
-- name: mhysteria51
-  type: hysteria
+- name: mss41
+  type: ss
   server: www.dtku48.xyz
-  port: 31402
-  sni: bing.com
-  skip-cert-verify: true
+  port: 20022
+  password: KIa7yLRa7XqlbKRh5tL11A==
+  cipher: aes-128-gcm
+- name: mtuic51
+  type: tuic
+  server: tuic1.cfcdn3.xyz
+  port: 65016
+  udp: true
+  uuid: 157c060e-7289-4fed-9154-00636029e064
+  password: 157c060e-7289-4fed-9154-00636029e064
   alpn:
   - h3
-  protocol: udp
-  auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
-  up: 30
-  down: 80
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: mvless61
   type: vless
   server: www.dtku49.xyz
@@ -287,11 +282,11 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mhysteria01
-  - mssr11
-  - mssr21
+  - mss11
+  - mss21
   - mhysteria31
-  - mssr41
-  - mhysteria51
+  - mss41
+  - mtuic51
   - mvless61
   - mhysteria71
   - mvless81
@@ -309,11 +304,11 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mhysteria01
-  - mssr11
-  - mssr21
+  - mss11
+  - mss21
   - mhysteria31
-  - mssr41
-  - mhysteria51
+  - mss41
+  - mtuic51
   - mvless61
   - mhysteria71
   - mvless81
@@ -331,11 +326,11 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mhysteria01
-  - mssr11
-  - mssr21
+  - mss11
+  - mss21
   - mhysteria31
-  - mssr41
-  - mhysteria51
+  - mss41
+  - mtuic51
   - mvless61
   - mhysteria71
   - mvless81
