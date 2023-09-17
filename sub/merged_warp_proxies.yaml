@@ -88,14 +88,18 @@ proxies:
   cipher: dummy
   obfs: plain
   protocol: auth_chain_a
-- name: mssr51
-  type: ssr
+- name: mhysteria51
+  type: hysteria
   server: www.dtku48.xyz
-  port: 10001
-  password: dongtaiwang.com
-  cipher: none
-  obfs: plain
-  protocol: auth_chain_a
+  port: 31402
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
+  up: 30
+  down: 80
 - name: mvless61
   type: vless
   server: www.dtku49.xyz
@@ -287,7 +291,7 @@ proxy-groups:
   - mssr21
   - mhysteria31
   - mssr41
-  - mssr51
+  - mhysteria51
   - mvless61
   - mhysteria71
   - mvless81
@@ -309,7 +313,7 @@ proxy-groups:
   - mssr21
   - mhysteria31
   - mssr41
-  - mssr51
+  - mhysteria51
   - mvless61
   - mhysteria71
   - mvless81
@@ -331,7 +335,7 @@ proxy-groups:
   - mssr21
   - mhysteria31
   - mssr41
-  - mssr51
+  - mhysteria51
   - mvless61
   - mhysteria71
   - mvless81
