@@ -117,7 +117,7 @@ try:
             sni = json_data["tls"]["sni"]
             auth = json_data["auth"]
             # 生成URL
-            hysteria2 = f"hysteria2://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria{index}"
+            hysteria2 = f"hysteria2://{auth}@{server}?insecure={insecure}&sni={sni}#hysteria2_{index}"
             merged_proxies_neko.append(hysteria2)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
