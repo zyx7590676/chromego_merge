@@ -40,42 +40,42 @@ proxies:
   dialer-proxy: WARP前置节点
 - name: mvless01
   type: vless
-  server: 108.181.22.130
-  port: 19011
+  server: 108.181.22.132
+  port: 20397
   udp: true
-  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  uuid: bd820dc9-be97-44ea-91e2-e95aeff0a13f
   tls: true
-  servername: addons.mozilla.org
+  servername: swdist.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+    public-key: 3VV2JfX6nC4POM8ciU-fi71lI5qdSqP6CNPwJOwBbA8
   client-fingerprint: chrome
 - name: mvless11
   type: vless
-  server: 108.181.22.130
-  port: 19011
+  server: www.dtku49.xyz
+  port: 20721
   udp: true
-  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  uuid: 0ee5a0c0-2047-4525-ad7c-265b0c497496
   tls: true
-  servername: addons.mozilla.org
+  servername: aod.itunes.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+    public-key: IniBg-mAOXGUbAZ74nm0NJIUwMyJzfwUCtS6ZMawUmY
   client-fingerprint: chrome
 - name: mvless21
   type: vless
-  server: 108.181.22.130
-  port: 19011
+  server: 64.110.26.218
+  port: 14191
   udp: true
-  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  uuid: f14ee0c0-635f-4978-85f4-56a1da97db6c
   tls: true
   servername: addons.mozilla.org
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+    public-key: H1TRVt9DmgnourkRmGGItBoDEleexzo12pf9EH6upRI
   client-fingerprint: chrome
 - name: mvless31
   type: vless
@@ -116,19 +116,12 @@ proxies:
   reality-opts:
     public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
   client-fingerprint: chrome
-- name: mvless61
-  type: vless
+- name: mss61
+  type: ss
   server: www.dtku49.xyz
-  port: 21610
-  udp: true
-  uuid: 6e6204a7-79e4-4904-8ede-f15f6343b832
-  tls: true
-  servername: swdist.apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: JY3VCTvY-droHRjgfdSGu9oU_F-il82LrTClI7oWWh4
-  client-fingerprint: chrome
+  port: 10088
+  password: dongtaiwang.com
+  cipher: aes-256-gcm
 - name: mhysteria71
   type: hysteria
   server: www.dtku50.xyz
@@ -154,19 +147,12 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: mvless91
-  type: vless
+- name: mss91
+  type: ss
   server: www.dtku49.xyz
-  port: 21610
-  udp: true
-  uuid: 6e6204a7-79e4-4904-8ede-f15f6343b832
-  tls: true
-  servername: swdist.apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: JY3VCTvY-droHRjgfdSGu9oU_F-il82LrTClI7oWWh4
-  client-fingerprint: chrome
+  port: 10088
+  password: dongtaiwang.com
+  cipher: aes-256-gcm
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
@@ -308,10 +294,10 @@ proxy-groups:
   - mvless31
   - mvless41
   - mvless51
-  - mvless61
+  - mss61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mss91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -330,10 +316,10 @@ proxy-groups:
   - mvless31
   - mvless41
   - mvless51
-  - mvless61
+  - mss61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mss91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -352,10 +338,10 @@ proxy-groups:
   - mvless31
   - mvless41
   - mvless51
-  - mvless61
+  - mss61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mss91
   - hysteria0
   - hysteria1
   - hysteria2
