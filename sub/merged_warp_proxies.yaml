@@ -52,36 +52,58 @@ proxies:
   up: 30
   down: 80
   hop_interval: 600
-- name: mss11
-  type: ss
+- name: mvless11
+  type: vless
   server: www.dtku49.xyz
-  port: 33333
-  password: dongtaiwang.com
-  cipher: aes-256-gcm
-- name: mss21
-  type: ss
+  port: 18113
+  udp: true
+  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  tls: true
+  servername: s0.awsstatic.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+  client-fingerprint: chrome
+- name: mvless21
+  type: vless
   server: www.dtku50.xyz
-  port: 40044
-  password: GigZ8tAuRg0OwkOWREohsE4gC/n2AqPsHrOsWR4GKfY=
-  cipher: aes-256-gcm
-- name: mhysteria31
-  type: hysteria
-  server: www.dtku48.xyz
-  port: 31402
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: 9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV
-  up: 30
-  down: 80
-- name: mss41
-  type: ss
-  server: www.dtku48.xyz
-  port: 20022
-  password: KIa7yLRa7XqlbKRh5tL11A==
-  cipher: aes-128-gcm
+  port: 20055
+  udp: true
+  uuid: 1630fbac-241f-4bc1-a28b-f32c79104c67
+  tls: true
+  servername: updates.cdn-apple.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 2AHqzptm5IQJ3Tgpiwz0Hu4HSboguKVIZl4BCY0DGGI
+  client-fingerprint: chrome
+- name: mvless31
+  type: vless
+  server: www.dtku50.xyz
+  port: 20055
+  udp: true
+  uuid: 1630fbac-241f-4bc1-a28b-f32c79104c67
+  tls: true
+  servername: updates.cdn-apple.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 2AHqzptm5IQJ3Tgpiwz0Hu4HSboguKVIZl4BCY0DGGI
+  client-fingerprint: chrome
+- name: mvless41
+  type: vless
+  server: www.dtku49.xyz
+  port: 18113
+  udp: true
+  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  tls: true
+  servername: s0.awsstatic.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+  client-fingerprint: chrome
 - name: mtuic51
   type: tuic
   server: tuic1.cfcdn3.xyz
@@ -232,17 +254,17 @@ proxies:
     short-id: ''
 - name: reality2
   type: vless
-  server: 108.181.22.140
-  port: 23694
-  uuid: 024fcb50-d42c-47b4-8662-329e7b50b748
+  server: www.dtku48.xyz
+  port: 17759
+  uuid: 172e24f4-850b-4adb-8ec0-1731a5716061
   network: tcp
   tls: true
   udp: true
   flow: xtls-rprx-vision
   client-fingerprint: chrome
-  servername: mensura.cdn-apple.com
+  servername: www.lovelive-anime.jp
   reality-opts:
-    public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
+    public-key: 2P5dOmsucY_VbyfkmfZkk_azSfA9e8Tua2MyVe5K6n4
     short-id: ''
 - name: reality3
   type: vless
@@ -282,10 +304,10 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mhysteria01
-  - mss11
-  - mss21
-  - mhysteria31
-  - mss41
+  - mvless11
+  - mvless21
+  - mvless31
+  - mvless41
   - mtuic51
   - mvless61
   - mhysteria71
@@ -304,10 +326,10 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mhysteria01
-  - mss11
-  - mss21
-  - mhysteria31
-  - mss41
+  - mvless11
+  - mvless21
+  - mvless31
+  - mvless41
   - mtuic51
   - mvless61
   - mhysteria71
@@ -326,10 +348,10 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mhysteria01
-  - mss11
-  - mss21
-  - mhysteria31
-  - mss41
+  - mvless11
+  - mvless21
+  - mvless31
+  - mvless41
   - mtuic51
   - mvless61
   - mhysteria71
