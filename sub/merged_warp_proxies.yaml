@@ -38,97 +38,96 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: mhysteria01
-  type: hysteria
-  server: 108.181.22.131
-  port: 32296
-  34500-34600: null
-  sni: qq.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: VZENlctKGivNmryU7Rb4spM8gBf7snyrA1NLfLHeM9roGWaEgS
-  up: 30
-  down: 80
-  hop_interval: 600
-- name: mvless11
+- name: mvless01
   type: vless
-  server: www.dtku49.xyz
-  port: 18113
+  server: 108.181.22.130
+  port: 19011
   udp: true
-  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
   tls: true
-  servername: s0.awsstatic.com
+  servername: addons.mozilla.org
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+  client-fingerprint: chrome
+- name: mvless11
+  type: vless
+  server: 108.181.22.130
+  port: 19011
+  udp: true
+  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  tls: true
+  servername: addons.mozilla.org
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
   client-fingerprint: chrome
 - name: mvless21
   type: vless
-  server: www.dtku50.xyz
-  port: 20055
+  server: 108.181.22.130
+  port: 19011
   udp: true
-  uuid: 1630fbac-241f-4bc1-a28b-f32c79104c67
+  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
   tls: true
-  servername: updates.cdn-apple.com
+  servername: addons.mozilla.org
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: 2AHqzptm5IQJ3Tgpiwz0Hu4HSboguKVIZl4BCY0DGGI
+    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
   client-fingerprint: chrome
 - name: mvless31
   type: vless
-  server: www.dtku50.xyz
-  port: 20055
+  server: 108.181.22.130
+  port: 19011
   udp: true
-  uuid: 1630fbac-241f-4bc1-a28b-f32c79104c67
+  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
   tls: true
-  servername: updates.cdn-apple.com
+  servername: addons.mozilla.org
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: 2AHqzptm5IQJ3Tgpiwz0Hu4HSboguKVIZl4BCY0DGGI
+    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
   client-fingerprint: chrome
 - name: mvless41
   type: vless
-  server: www.dtku49.xyz
-  port: 18113
+  server: 108.181.22.130
+  port: 19011
   udp: true
-  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
   tls: true
-  servername: s0.awsstatic.com
+  servername: addons.mozilla.org
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
   client-fingerprint: chrome
-- name: mtuic51
-  type: tuic
-  server: tuic1.cfcdn3.xyz
-  port: 65016
+- name: mvless51
+  type: vless
+  server: 108.181.22.130
+  port: 19011
   udp: true
-  uuid: 157c060e-7289-4fed-9154-00636029e064
-  password: 157c060e-7289-4fed-9154-00636029e064
-  alpn:
-  - h3
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
+  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  tls: true
+  servername: addons.mozilla.org
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+  client-fingerprint: chrome
 - name: mvless61
   type: vless
   server: www.dtku49.xyz
-  port: 18113
+  port: 21610
   udp: true
-  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  uuid: 6e6204a7-79e4-4904-8ede-f15f6343b832
   tls: true
-  servername: s0.awsstatic.com
+  servername: swdist.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+    public-key: JY3VCTvY-droHRjgfdSGu9oU_F-il82LrTClI7oWWh4
   client-fingerprint: chrome
 - name: mhysteria71
   type: hysteria
@@ -158,15 +157,15 @@ proxies:
 - name: mvless91
   type: vless
   server: www.dtku49.xyz
-  port: 18113
+  port: 21610
   udp: true
-  uuid: 1a66f4f9-00b8-460e-b02e-17b2eaa9eae5
+  uuid: 6e6204a7-79e4-4904-8ede-f15f6343b832
   tls: true
-  servername: s0.awsstatic.com
+  servername: swdist.apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE
+    public-key: JY3VCTvY-droHRjgfdSGu9oU_F-il82LrTClI7oWWh4
   client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
@@ -303,12 +302,12 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - mhysteria01
+  - mvless01
   - mvless11
   - mvless21
   - mvless31
   - mvless41
-  - mtuic51
+  - mvless51
   - mvless61
   - mhysteria71
   - mvless81
@@ -325,12 +324,12 @@ proxy-groups:
   type: select
   proxies:
   - 油管-绵阿羊
-  - mhysteria01
+  - mvless01
   - mvless11
   - mvless21
   - mvless31
   - mvless41
-  - mtuic51
+  - mvless51
   - mvless61
   - mhysteria71
   - mvless81
@@ -347,12 +346,12 @@ proxy-groups:
   type: load-balance
   proxies:
   - 油管-绵阿羊
-  - mhysteria01
+  - mvless01
   - mvless11
   - mvless21
   - mvless31
   - mvless41
-  - mtuic51
+  - mvless51
   - mvless61
   - mhysteria71
   - mvless81
