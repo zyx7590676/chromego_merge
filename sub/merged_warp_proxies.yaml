@@ -64,19 +64,20 @@ proxies:
   reality-opts:
     public-key: IniBg-mAOXGUbAZ74nm0NJIUwMyJzfwUCtS6ZMawUmY
   client-fingerprint: chrome
-- name: mvless21
-  type: vless
-  server: 64.110.26.218
-  port: 14191
-  udp: true
-  uuid: f14ee0c0-635f-4978-85f4-56a1da97db6c
-  tls: true
-  servername: addons.mozilla.org
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: H1TRVt9DmgnourkRmGGItBoDEleexzo12pf9EH6upRI
-  client-fingerprint: chrome
+- name: mhysteria21
+  type: hysteria
+  server: 108.181.22.132
+  port: 53352
+  12000-13000: null
+  sni: brave.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: LjkWEh76iGmvmECQoT6N1CFflDogah4gcYTQZuAeSN2HNUsjRN
+  up: 30
+  down: 80
+  hop_interval: 150
 - name: mvless31
   type: vless
   server: 108.181.22.130
@@ -290,7 +291,7 @@ proxy-groups:
   - 油管-绵阿羊
   - mvless01
   - mvless11
-  - mvless21
+  - mhysteria21
   - mvless31
   - mvless41
   - mvless51
@@ -312,7 +313,7 @@ proxy-groups:
   - 油管-绵阿羊
   - mvless01
   - mvless11
-  - mvless21
+  - mhysteria21
   - mvless31
   - mvless41
   - mvless51
@@ -334,7 +335,7 @@ proxy-groups:
   - 油管-绵阿羊
   - mvless01
   - mvless11
-  - mvless21
+  - mhysteria21
   - mvless31
   - mvless41
   - mvless51

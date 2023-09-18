@@ -12,7 +12,7 @@ vless://172e24f4-850b-4adb-8ec0-1731a5716061@www.dtku48.xyz:17759?security=reali
 vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE&sni=mensura.cdn-apple.com&spx=&sid=#REALITY3
 vless://bd820dc9-be97-44ea-91e2-e95aeff0a13f@108.181.22.132:20397?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=3VV2JfX6nC4POM8ciU-fi71lI5qdSqP6CNPwJOwBbA8&sni=swdist.apple.com#reality_meta0
 vless://0ee5a0c0-2047-4525-ad7c-265b0c497496@www.dtku49.xyz:20721?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=IniBg-mAOXGUbAZ74nm0NJIUwMyJzfwUCtS6ZMawUmY&sni=aod.itunes.apple.com#reality_meta1
-vless://f14ee0c0-635f-4978-85f4-56a1da97db6c@64.110.26.218:14191?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=H1TRVt9DmgnourkRmGGItBoDEleexzo12pf9EH6upRI&sni=addons.mozilla.org#reality_meta2
+hysteria://108.181.22.132:53352?peer=brave.com&auth=LjkWEh76iGmvmECQoT6N1CFflDogah4gcYTQZuAeSN2HNUsjRN&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=53352&obfs=&protocol=udp&fastopen=1#hysteria2
 vless://5ee73951-3411-4ebb-b1d2-456a1c376dbd@108.181.22.130:19011?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY&sni=addons.mozilla.org#reality_meta3
 vless://5ee73951-3411-4ebb-b1d2-456a1c376dbd@108.181.22.130:19011?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY&sni=addons.mozilla.org#reality_meta4
 vless://5ee73951-3411-4ebb-b1d2-456a1c376dbd@108.181.22.130:19011?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY&sni=addons.mozilla.org#reality_meta5
