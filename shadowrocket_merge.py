@@ -209,6 +209,37 @@ try:
                     reality_meta =  f"vless://{uuid}@{server}:{port}?security=reality&flow={flow}&type={network}&fp={fingerprint}&pbk={publicKey}&sni={serverName}#reality_meta{index}"
                     merged_proxies.append(reality_meta)
                     merged_proxies_neko.append(reality_meta)
+                if proxy['type'] == 'vmess' :
+                    server = proxy['server']
+                    port  = proxy['port']
+                    cipher = proxy['cipher']
+                    uuid = proxy['uuid']
+                    alterId = proxy['alterId']
+                    tls = proxy['tls']
+                    server_name = proxy['servername']
+                    skip_cert_verify = proxy['skip-cert-verify']
+                    network = proxy['network']
+                    ws_path = proxy['ws-opts']['path']
+                    ws_headers_host = proxy['ws-opts']['headers']['host']
+                    data = {
+                        'add': server,
+                        'aid': alterId,
+                        'host': ws_headers_host,
+                        'id': uuid,
+                        'net': network,
+                        'path': ws_path,
+                        'port': port,
+                        'scy': cipher,
+                        'sni': server_name,
+                        'tls': '',
+                        'type': 'none',
+                        'v': '2'                        
+                    }
+                    json_str = json.dumps(data)
+                    json_str = base64.b64encode(json_str.encode()).decode()
+                    vmess_meta =  f"vmess://{json_str}"
+                    merged_proxies.append(vmess_meta)
+                    merged_proxies_neko.append(vmess_meta)
                 elif proxy['type'] == 'tuic':
                     server = proxy["server"]
                     port = proxy["port"]
