@@ -6,15 +6,7 @@ hysteria://167.160.91.115:13928?peer=paypal.com&auth=BF0LL4L2jlqSdW3KxjQv81AiFFj
 hysteria://173.234.25.52:20164?peer=www.microsoft.com&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria1
 hysteria://173.234.25.52:20164?peer=www.microsoft.com&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria2
 hysteria://51.158.54.46:49139?peer=www.paypal.com&auth=dongtaiwang.com&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria3
-vless://9e2626df-3467-4393-9f7c-aaca6fe4336c@173.234.25.51:29295?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=LN86WNkTPKjU0rSHPg1X7TGZy1ba9vGwnt_MukdZOB8&sni=m.media-amazon.com&spx=&sid=#REALITY0
-vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE&sni=mensura.cdn-apple.com&spx=&sid=#REALITY1
 vless://172e24f4-850b-4adb-8ec0-1731a5716061@www.dtku48.xyz:17759?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=2P5dOmsucY_VbyfkmfZkk_azSfA9e8Tua2MyVe5K6n4&sni=www.lovelive-anime.jp&spx=&sid=#REALITY2
 vless://024fcb50-d42c-47b4-8662-329e7b50b748@108.181.22.140:23694?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE&sni=mensura.cdn-apple.com&spx=&sid=#REALITY3
-vless://ab56f166-5e63-45c7-b417-1431e81f9646@108.181.22.130:12659?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=Sv38OgZ55KEaVflho1WH-F2LFT99__6qA97n2mdv9kU&sni=gateway.icloud.com#reality_meta0
-vless://debc577a-b790-4ee9-b1d1-16cc21719c51@www.dtku49.xyz:26932?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=t-ymTkJZPMheRrHEDHNALpbYI-cGDhC5H-qTVdjtHXI&sni=player.live-video.net#reality_meta1
-vless://a972b075-44bd-486b-9733-1510946de4d0@64.110.26.218:27337?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM&sni=mensura.cdn-apple.com#reality_meta2
-vless://a972b075-44bd-486b-9733-1510946de4d0@64.110.26.218:27337?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM&sni=mensura.cdn-apple.com#reality_meta3
-vless://a972b075-44bd-486b-9733-1510946de4d0@64.110.26.218:27337?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM&sni=mensura.cdn-apple.com#reality_meta4
-vless://a972b075-44bd-486b-9733-1510946de4d0@64.110.26.218:27337?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM&sni=mensura.cdn-apple.com#reality_meta5
 hysteria://www.dtku50.xyz:43250?peer=bing.com&auth=2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=43250&obfs=&protocol=udp&fastopen=1#hysteria7
 vless://34f36b97-1fb7-41f3-8db4-912cc69e724a@45.150.165.61:25678?security=reality&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc&sni=itunes.apple.com#reality_meta8
