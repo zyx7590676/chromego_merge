@@ -216,20 +216,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: reality2
-  type: vless
-  server: www.dtku48.xyz
-  port: 17759
-  uuid: 172e24f4-850b-4adb-8ec0-1731a5716061
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: www.lovelive-anime.jp
-  reality-opts:
-    public-key: 2P5dOmsucY_VbyfkmfZkk_azSfA9e8Tua2MyVe5K6n4
-    short-id: ''
 - name: reality3
   type: vless
   server: 108.181.22.140
@@ -265,7 +251,6 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
-  - reality2
   - reality3
 - name: 自动选择
   type: url-test
@@ -288,7 +273,6 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
-  - reality2
   - reality3
 rule-providers:
   reject:
