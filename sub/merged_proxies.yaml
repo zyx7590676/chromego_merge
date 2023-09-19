@@ -22,82 +22,81 @@ proxies:
   skip-cert-verify: true
 - name: mvless01
   type: vless
-  server: 108.181.22.132
-  port: 20397
+  server: 108.181.22.130
+  port: 12659
   udp: true
-  uuid: bd820dc9-be97-44ea-91e2-e95aeff0a13f
+  uuid: ab56f166-5e63-45c7-b417-1431e81f9646
   tls: true
-  servername: swdist.apple.com
+  servername: gateway.icloud.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: 3VV2JfX6nC4POM8ciU-fi71lI5qdSqP6CNPwJOwBbA8
+    public-key: Sv38OgZ55KEaVflho1WH-F2LFT99__6qA97n2mdv9kU
   client-fingerprint: chrome
 - name: mvless11
   type: vless
   server: www.dtku49.xyz
-  port: 20721
+  port: 26932
   udp: true
-  uuid: 0ee5a0c0-2047-4525-ad7c-265b0c497496
+  uuid: debc577a-b790-4ee9-b1d1-16cc21719c51
   tls: true
-  servername: aod.itunes.apple.com
+  servername: player.live-video.net
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: IniBg-mAOXGUbAZ74nm0NJIUwMyJzfwUCtS6ZMawUmY
+    public-key: t-ymTkJZPMheRrHEDHNALpbYI-cGDhC5H-qTVdjtHXI
   client-fingerprint: chrome
-- name: mhysteria21
-  type: hysteria
-  server: 108.181.22.132
-  port: 53352
-  12000-13000: null
-  sni: brave.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: LjkWEh76iGmvmECQoT6N1CFflDogah4gcYTQZuAeSN2HNUsjRN
-  up: 30
-  down: 80
-  hop_interval: 150
+- name: mvless21
+  type: vless
+  server: 64.110.26.218
+  port: 27337
+  udp: true
+  uuid: a972b075-44bd-486b-9733-1510946de4d0
+  tls: true
+  servername: mensura.cdn-apple.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM
+  client-fingerprint: chrome
 - name: mvless31
   type: vless
-  server: 108.181.22.130
-  port: 19011
+  server: 64.110.26.218
+  port: 27337
   udp: true
-  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  uuid: a972b075-44bd-486b-9733-1510946de4d0
   tls: true
-  servername: addons.mozilla.org
+  servername: mensura.cdn-apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+    public-key: 8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM
   client-fingerprint: chrome
 - name: mvless41
   type: vless
-  server: 108.181.22.130
-  port: 19011
+  server: 64.110.26.218
+  port: 27337
   udp: true
-  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  uuid: a972b075-44bd-486b-9733-1510946de4d0
   tls: true
-  servername: addons.mozilla.org
+  servername: mensura.cdn-apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+    public-key: 8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM
   client-fingerprint: chrome
 - name: mvless51
   type: vless
-  server: 108.181.22.130
-  port: 19011
+  server: 64.110.26.218
+  port: 27337
   udp: true
-  uuid: 5ee73951-3411-4ebb-b1d2-456a1c376dbd
+  uuid: a972b075-44bd-486b-9733-1510946de4d0
   tls: true
-  servername: addons.mozilla.org
+  servername: mensura.cdn-apple.com
   flow: xtls-rprx-vision
   network: tcp
   reality-opts:
-    public-key: B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY
+    public-key: 8Ox_1_YEj1XIRmCX1XSK08-N3euq_gwbOccyJXHC8RM
   client-fingerprint: chrome
 - name: mss61
   type: ss
@@ -257,7 +256,7 @@ proxy-groups:
   - 油管-绵阿羊
   - mvless01
   - mvless11
-  - mhysteria21
+  - mvless21
   - mvless31
   - mvless41
   - mvless51
@@ -282,7 +281,7 @@ proxy-groups:
   - 油管-绵阿羊
   - mvless01
   - mvless11
-  - mhysteria21
+  - mvless21
   - mvless31
   - mvless41
   - mvless51
