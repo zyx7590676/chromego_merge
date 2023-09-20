@@ -123,12 +123,19 @@ proxies:
     path: /BR7cUfTm/
     headers:
       host: cf2.freek1.xyz
-- name: mss61
-  type: ss
+- name: mvless61
+  type: vless
   server: www.dtku49.xyz
-  port: 10088
-  password: dongtaiwang.com
-  cipher: aes-256-gcm
+  port: 18514
+  udp: true
+  uuid: 69521861-80c5-4bc9-aaf1-aaaac63a1ca2
+  tls: true
+  servername: mensura.cdn-apple.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 0O8GlvlpcXl40QMMtnB87rnntF0VOcxyYjBFF5C-TGo
+  client-fingerprint: chrome
 - name: mhysteria71
   type: hysteria
   server: www.dtku50.xyz
@@ -154,12 +161,19 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: mss91
-  type: ss
+- name: mvless91
+  type: vless
   server: www.dtku49.xyz
-  port: 10088
-  password: dongtaiwang.com
-  cipher: aes-256-gcm
+  port: 18514
+  udp: true
+  uuid: 69521861-80c5-4bc9-aaf1-aaaac63a1ca2
+  tls: true
+  servername: mensura.cdn-apple.com
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 0O8GlvlpcXl40QMMtnB87rnntF0VOcxyYjBFF5C-TGo
+  client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
@@ -243,10 +257,10 @@ proxy-groups:
   - mvmess31
   - mvmess41
   - mvmess51
-  - mss61
+  - mvless61
   - mhysteria71
   - mvless81
-  - mss91
+  - mvless91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -265,10 +279,10 @@ proxy-groups:
   - mvmess31
   - mvmess41
   - mvmess51
-  - mss61
+  - mvless61
   - mhysteria71
   - mvless81
-  - mss91
+  - mvless91
   - hysteria0
   - hysteria1
   - hysteria2
