@@ -33,96 +33,88 @@ proxies:
   udp: true
   sni: gw.alicdn.com
   skip-cert-verify: true
-- name: mvmess01
-  type: vmess
+- name: mvless01
+  type: vless
   server: dongtaiwang2.com
-  port: 8080
-  cipher: auto
-  uuid: 252f9ec7-42e8-4c66-9a41-673d9b8e6799
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: ''
+  port: 443
+  uuid: 6bd2d2f3-ac76-4a48-93c0-8e58154a03d9
+  tls: true
+  servername: cf108.freek1.xyz
   network: ws
   ws-opts:
-    path: /lR4PxFLn/
+    path: /xjefws
     headers:
-      host: cf1.freek1.xyz
+      host: cf108.freek1.xyz
+  client-fingerprint: chrome
 - name: mvmess11
   type: vmess
-  server: dongtaiwang3.com
-  port: 8880
+  server: dongtaiwang2.com
+  port: 443
   cipher: auto
-  uuid: 208d8c18-4f63-4013-bd67-a39f62301132
+  uuid: d70c4505-c9d7-44c4-a1ff-98a0bc7ebdd3
   alterId: 0
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: ''
   network: ws
   ws-opts:
-    path: /YGhTwaEU/
+    path: /dongtaiwang.com
     headers:
-      host: cf1.freeh1.xyz
-- name: mvmess21
-  type: vmess
-  server: www.dongtaiwang2.com
-  port: 8080
-  cipher: auto
-  uuid: 252f9ec7-42e8-4c66-9a41-673d9b8e6799
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: ''
+      host: d.freeh1.xyz
+- name: mvless21
+  type: vless
+  server: v4.cfnode.eu.org
+  port: 443
+  uuid: 6bd2d2f3-ac76-4a48-93c0-8e58154a03d9
+  tls: true
+  servername: cf108.freek1.xyz
   network: ws
   ws-opts:
-    path: /lR4PxFLn/
+    path: /xjefws
     headers:
-      host: cf1.freek1.xyz
-- name: mvmess31
-  type: vmess
-  server: upload.yunzhongzhuan.com
-  port: 8880
-  cipher: auto
-  uuid: 208d8c18-4f63-4013-bd67-a39f62301132
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: ''
+      host: cf108.freek1.xyz
+  client-fingerprint: chrome
+- name: mvless31
+  type: vless
+  server: download.yunzhongzhuan.com
+  port: 443
+  uuid: 6bd2d2f3-ac76-4a48-93c0-8e58154a03d9
+  tls: true
+  servername: cf108.freek1.xyz
   network: ws
   ws-opts:
-    path: /YGhTwaEU/
+    path: /xjefws
     headers:
-      host: cf1.freeh1.xyz
+      host: cf108.freek1.xyz
+  client-fingerprint: chrome
 - name: mvmess41
   type: vmess
   server: download.yunzhongzhuan.com
-  port: 8880
+  port: 443
   cipher: auto
-  uuid: 208d8c18-4f63-4013-bd67-a39f62301132
+  uuid: d70c4505-c9d7-44c4-a1ff-98a0bc7ebdd3
   alterId: 0
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: ''
   network: ws
   ws-opts:
-    path: /YGhTwaEU/
+    path: /dongtaiwang.com
     headers:
-      host: cf1.freeh1.xyz
-- name: mvmess51
-  type: vmess
-  server: 162.159.136.160
-  port: 8080
-  cipher: auto
-  uuid: c0d40e10-c828-4ea4-8494-56067cbbbc5e
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: ''
+      host: d.freeh1.xyz
+- name: mvless51
+  type: vless
+  server: www.dongtaiwang2.com
+  port: 443
+  uuid: 6bd2d2f3-ac76-4a48-93c0-8e58154a03d9
+  tls: true
+  servername: cf108.freek1.xyz
   network: ws
   ws-opts:
-    path: /BR7cUfTm/
+    path: /xjefws
     headers:
-      host: cf2.freek1.xyz
+      host: cf108.freek1.xyz
+  client-fingerprint: chrome
 - name: mvless61
   type: vless
   server: www.dtku49.xyz
@@ -230,6 +222,20 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: reality0
+  type: vless
+  server: 108.181.22.140
+  port: 23694
+  uuid: 024fcb50-d42c-47b4-8662-329e7b50b748
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: mensura.cdn-apple.com
+  reality-opts:
+    public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
+    short-id: ''
 - name: reality3
   type: vless
   server: 108.181.22.140
@@ -251,12 +257,12 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - 油管-绵阿羊
-  - mvmess01
+  - mvless01
   - mvmess11
-  - mvmess21
-  - mvmess31
+  - mvless21
+  - mvless31
   - mvmess41
-  - mvmess51
+  - mvless51
   - mvless61
   - mhysteria71
   - mvless81
@@ -265,6 +271,7 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
+  - reality0
   - reality3
 - name: 自动选择
   type: url-test
@@ -273,12 +280,12 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - mvmess01
+  - mvless01
   - mvmess11
-  - mvmess21
-  - mvmess31
+  - mvless21
+  - mvless31
   - mvmess41
-  - mvmess51
+  - mvless51
   - mvless61
   - mhysteria71
   - mvless81
@@ -287,6 +294,7 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
+  - reality0
   - reality3
 rule-providers:
   reject:
