@@ -172,18 +172,20 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: mhysteria91
-  type: hysteria
-  server: www.dtku50.xyz
-  port: 43250
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
-  up: 30
-  down: 80
+- name: mvless91
+  type: vless
+  server: www.dtku49.xyz
+  port: 25401
+  udp: true
+  uuid: 0a4b070f-a5fb-4f06-ae61-c0e6cbdbd3c4
+  tls: true
+  servername: player.live-video.net
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: TmhOdLMEQFvViSQ3Vcu2ag-DN8s3TH8uuOFQIb0EJlk
+    short-id: 6ba85179e30d4fc2
+  client-fingerprint: chrome
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
@@ -254,6 +256,22 @@ proxies:
   reality-opts:
     public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
     short-id: ''
+- name: reality2
+  type: vless
+  server: www.dtku49.xyz
+  port: 25401
+  uuid: 0a4b070f-a5fb-4f06-ae61-c0e6cbdbd3c4
+  network: grpc
+  tls: true
+  udp: true
+  flow: ''
+  client-fingerprint: chrome
+  servername: player.live-video.net
+  grpc-opts:
+    grpc-service-name: grpc
+  reality-opts:
+    public-key: TmhOdLMEQFvViSQ3Vcu2ag-DN8s3TH8uuOFQIb0EJlk
+    short-id: 6ba85179e30d4fc2
 proxy-groups:
 - name: 节点选择
   type: select
@@ -286,12 +304,13 @@ proxy-groups:
   - mhysteria61
   - mhysteria71
   - mvless81
-  - mhysteria91
+  - mvless91
   - hysteria0
   - hysteria1
   - hysteria2
   - hysteria3
   - reality0
+  - reality2
 - name: 手动选择
   type: select
   proxies:
@@ -305,12 +324,13 @@ proxy-groups:
   - mhysteria61
   - mhysteria71
   - mvless81
-  - mhysteria91
+  - mvless91
   - hysteria0
   - hysteria1
   - hysteria2
   - hysteria3
   - reality0
+  - reality2
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -324,12 +344,13 @@ proxy-groups:
   - mhysteria61
   - mhysteria71
   - mvless81
-  - mhysteria91
+  - mvless91
   - hysteria0
   - hysteria1
   - hysteria2
   - hysteria3
   - reality0
+  - reality2
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
