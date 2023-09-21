@@ -51,34 +51,36 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: mvless01
-  type: vless
-  server: dongtaiwang2.com
-  port: 443
-  uuid: 6bd2d2f3-ac76-4a48-93c0-8e58154a03d9
-  tls: true
-  servername: cf108.freek1.xyz
-  network: ws
-  ws-opts:
-    path: /xjefws
-    headers:
-      host: cf108.freek1.xyz
-  client-fingerprint: chrome
-- name: mvmess11
+- name: mvmess01
   type: vmess
-  server: dongtaiwang2.com
-  port: 443
+  server: v4.cfnode.eu.org
+  port: 8880
   cipher: auto
-  uuid: d70c4505-c9d7-44c4-a1ff-98a0bc7ebdd3
+  uuid: 0dc3ae8c-43d4-4a19-97d3-e78ff2e2fdab
   alterId: 0
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: ''
   network: ws
   ws-opts:
-    path: /dongtaiwang.com
+    path: /OFR9SgW0/
     headers:
-      host: d.freeh1.xyz
+      host: 8.dtku47.xyz
+- name: mvmess11
+  type: vmess
+  server: dongtaiwang2.com
+  port: 8880
+  cipher: auto
+  uuid: 0dc3ae8c-43d4-4a19-97d3-e78ff2e2fdab
+  alterId: 0
+  tls: false
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /OFR9SgW0/
+    headers:
+      host: 7.dtku47.xyz
 - name: mvless21
   type: vless
   server: v4.cfnode.eu.org
@@ -254,20 +256,6 @@ proxies:
   reality-opts:
     public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
     short-id: ''
-- name: reality3
-  type: vless
-  server: 108.181.22.140
-  port: 23694
-  uuid: 024fcb50-d42c-47b4-8662-329e7b50b748
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: mensura.cdn-apple.com
-  reality-opts:
-    public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
-    short-id: ''
 proxy-groups:
 - name: 节点选择
   type: select
@@ -291,7 +279,7 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - mvless01
+  - mvmess01
   - mvmess11
   - mvless21
   - mvless31
@@ -306,12 +294,11 @@ proxy-groups:
   - hysteria2
   - hysteria3
   - reality0
-  - reality3
 - name: 手动选择
   type: select
   proxies:
   - 油管-绵阿羊
-  - mvless01
+  - mvmess01
   - mvmess11
   - mvless21
   - mvless31
@@ -326,12 +313,11 @@ proxy-groups:
   - hysteria2
   - hysteria3
   - reality0
-  - reality3
 - name: 负载均衡
   type: load-balance
   proxies:
   - 油管-绵阿羊
-  - mvless01
+  - mvmess01
   - mvmess11
   - mvless21
   - mvless31
@@ -346,7 +332,6 @@ proxy-groups:
   - hysteria2
   - hysteria3
   - reality0
-  - reality3
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
