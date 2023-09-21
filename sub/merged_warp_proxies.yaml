@@ -53,7 +53,7 @@ proxies:
   dialer-proxy: WARP前置节点
 - name: mvmess01
   type: vmess
-  server: v4.cfnode.eu.org
+  server: dongtaiwang2.com
   port: 8880
   cipher: auto
   uuid: 0dc3ae8c-43d4-4a19-97d3-e78ff2e2fdab
@@ -65,7 +65,7 @@ proxies:
   ws-opts:
     path: /OFR9SgW0/
     headers:
-      host: 8.dtku47.xyz
+      host: 9.dtku47.xyz
 - name: mvmess11
   type: vmess
   server: dongtaiwang2.com
@@ -135,19 +135,18 @@ proxies:
     headers:
       host: cf108.freek1.xyz
   client-fingerprint: chrome
-- name: mvless61
-  type: vless
-  server: www.dtku49.xyz
-  port: 18514
-  udp: true
-  uuid: 69521861-80c5-4bc9-aaf1-aaaac63a1ca2
-  tls: true
-  servername: mensura.cdn-apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: 0O8GlvlpcXl40QMMtnB87rnntF0VOcxyYjBFF5C-TGo
-  client-fingerprint: chrome
+- name: mhysteria61
+  type: hysteria
+  server: www.dtku50.xyz
+  port: 43250
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
+  up: 30
+  down: 80
 - name: mhysteria71
   type: hysteria
   server: www.dtku50.xyz
@@ -173,19 +172,18 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: mvless91
-  type: vless
-  server: www.dtku49.xyz
-  port: 18514
-  udp: true
-  uuid: 69521861-80c5-4bc9-aaf1-aaaac63a1ca2
-  tls: true
-  servername: mensura.cdn-apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: 0O8GlvlpcXl40QMMtnB87rnntF0VOcxyYjBFF5C-TGo
-  client-fingerprint: chrome
+- name: mhysteria91
+  type: hysteria
+  server: www.dtku50.xyz
+  port: 43250
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
+  up: 30
+  down: 80
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
@@ -285,10 +283,10 @@ proxy-groups:
   - mvless31
   - mvmess41
   - mvless51
-  - mvless61
+  - mhysteria61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mhysteria91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -304,10 +302,10 @@ proxy-groups:
   - mvless31
   - mvmess41
   - mvless51
-  - mvless61
+  - mhysteria61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mhysteria91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -323,10 +321,10 @@ proxy-groups:
   - mvless31
   - mvmess41
   - mvless51
-  - mvless61
+  - mhysteria61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mhysteria91
   - hysteria0
   - hysteria1
   - hysteria2
