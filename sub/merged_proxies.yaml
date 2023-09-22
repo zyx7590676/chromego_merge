@@ -33,21 +33,12 @@ proxies:
   udp: true
   sni: gw.alicdn.com
   skip-cert-verify: true
-- name: mvmess01
-  type: vmess
-  server: dongtaiwang2.com
-  port: 8880
-  cipher: auto
-  uuid: 0dc3ae8c-43d4-4a19-97d3-e78ff2e2fdab
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: /OFR9SgW0/
-    headers:
-      host: 9.dtku47.xyz
+- name: mss01
+  type: ss
+  server: 108.181.22.130
+  port: 19117
+  password: VDKCjVeRIFcIXRQ6vPutZQ==
+  cipher: 2022-blake3-aes-128-gcm
 - name: mvmess11
   type: vmess
   server: dongtaiwang2.com
@@ -117,18 +108,12 @@ proxies:
     headers:
       host: cf108.freek1.xyz
   client-fingerprint: chrome
-- name: mhysteria61
-  type: hysteria
-  server: www.dtku50.xyz
-  port: 43250
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
-  up: 30
-  down: 80
+- name: mss61
+  type: ss
+  server: www2.dtku49.xyz
+  port: 11105
+  password: thqfFCl0zl4Wyc0FaKxTQw==
+  cipher: 2022-blake3-aes-128-gcm
 - name: mhysteria71
   type: hysteria
   server: www.dtku50.xyz
@@ -154,20 +139,12 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: mvless91
-  type: vless
+- name: mss91
+  type: ss
   server: www.dtku49.xyz
-  port: 25401
-  udp: true
-  uuid: 0a4b070f-a5fb-4f06-ae61-c0e6cbdbd3c4
-  tls: true
-  servername: player.live-video.net
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: TmhOdLMEQFvViSQ3Vcu2ag-DN8s3TH8uuOFQIb0EJlk
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
+  port: 10382
+  password: c6WFCUqSAe/otYPfVUve3lK6LIjyge3A+s9GST7QQ+c=
+  cipher: 2022-blake3-aes-256-gcm
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
@@ -238,22 +215,6 @@ proxies:
   reality-opts:
     public-key: Pjgg-A89G4QbXUjFhoNCOyUxR-jcvnn64lSo1XYZqnE
     short-id: ''
-- name: reality2
-  type: vless
-  server: www.dtku49.xyz
-  port: 25401
-  uuid: 0a4b070f-a5fb-4f06-ae61-c0e6cbdbd3c4
-  network: grpc
-  tls: true
-  udp: true
-  flow: ''
-  client-fingerprint: chrome
-  servername: player.live-video.net
-  grpc-opts:
-    grpc-service-name: grpc
-  reality-opts:
-    public-key: TmhOdLMEQFvViSQ3Vcu2ag-DN8s3TH8uuOFQIb0EJlk
-    short-id: 6ba85179e30d4fc2
 proxy-groups:
 - name: 节点选择
   type: select
@@ -261,22 +222,21 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - 油管-绵阿羊
-  - mvmess01
+  - mss01
   - mvmess11
   - mvless21
   - mvless31
   - mvmess41
   - mvless51
-  - mhysteria61
+  - mss61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mss91
   - hysteria0
   - hysteria1
   - hysteria2
   - hysteria3
   - reality0
-  - reality2
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -284,22 +244,21 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - mvmess01
+  - mss01
   - mvmess11
   - mvless21
   - mvless31
   - mvmess41
   - mvless51
-  - mhysteria61
+  - mss61
   - mhysteria71
   - mvless81
-  - mvless91
+  - mss91
   - hysteria0
   - hysteria1
   - hysteria2
   - hysteria3
   - reality0
-  - reality2
 rule-providers:
   reject:
     type: http
