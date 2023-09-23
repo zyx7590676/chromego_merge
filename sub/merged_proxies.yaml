@@ -71,14 +71,18 @@ proxies:
   cipher: dummy
   obfs: plain
   protocol: auth_chain_a
-- name: mssr51
-  type: ssr
-  server: 108.181.22.133
-  port: 30001
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+- name: mhysteria51
+  type: hysteria
+  server: 108.181.22.205
+  port: 32645
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: A5KdgNc7C69fuGw3my7FYyJnDVj55rwxLCIU70ObVCXRzHhEit
+  up: 30
+  down: 80
 - name: mss61
   type: ss
   server: www2.dtku49.xyz
@@ -172,7 +176,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: reality0
+- name: reality1
   type: vless
   server: 108.181.22.140
   port: 23694
@@ -198,7 +202,7 @@ proxy-groups:
   - mssr21
   - mssr31
   - mssr41
-  - mssr51
+  - mhysteria51
   - mss61
   - mhysteria71
   - mvless81
@@ -207,7 +211,7 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
-  - reality0
+  - reality1
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -220,7 +224,7 @@ proxy-groups:
   - mssr21
   - mssr31
   - mssr41
-  - mssr51
+  - mhysteria51
   - mss61
   - mhysteria71
   - mvless81
@@ -229,7 +233,7 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
-  - reality0
+  - reality1
 rule-providers:
   reject:
     type: http
