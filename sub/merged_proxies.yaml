@@ -55,14 +55,19 @@ proxies:
   cipher: dummy
   obfs: plain
   protocol: auth_chain_a
-- name: mssr31
-  type: ssr
-  server: 108.181.22.133
-  port: 30001
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+- name: mtuic31
+  type: tuic
+  server: tuic1.dtku47.xyz
+  port: 23788
+  udp: true
+  uuid: ae02b441-c64b-46d3-bdc4-c0f578b1db22
+  password: xLDZTVuo3cjI
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: mssr41
   type: ssr
   server: 108.181.22.133
@@ -200,7 +205,7 @@ proxy-groups:
   - mss01
   - mssr11
   - mssr21
-  - mssr31
+  - mtuic31
   - mssr41
   - mhysteria51
   - mss61
@@ -222,7 +227,7 @@ proxy-groups:
   - mss01
   - mssr11
   - mssr21
-  - mssr31
+  - mtuic31
   - mssr41
   - mhysteria51
   - mss61
