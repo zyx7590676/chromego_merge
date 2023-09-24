@@ -57,14 +57,19 @@ proxies:
   port: 19117
   password: VDKCjVeRIFcIXRQ6vPutZQ==
   cipher: 2022-blake3-aes-128-gcm
-- name: mssr11
-  type: ssr
-  server: 108.181.22.133
-  port: 30001
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+- name: mtuic11
+  type: tuic
+  server: tuic3.dtku47.xyz
+  port: 13579
+  udp: true
+  uuid: e8829e2c-030f-477c-badd-a6817d0e4ff3
+  password: c9oG5brYoLUd
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: mssr21
   type: ssr
   server: 108.181.22.133
@@ -237,7 +242,7 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mss01
-  - mssr11
+  - mtuic11
   - mssr21
   - mtuic31
   - mssr41
@@ -256,7 +261,7 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mss01
-  - mssr11
+  - mtuic11
   - mssr21
   - mtuic31
   - mssr41
@@ -275,7 +280,7 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - mss01
-  - mssr11
+  - mtuic11
   - mssr21
   - mtuic31
   - mssr41
