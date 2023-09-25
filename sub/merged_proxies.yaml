@@ -186,6 +186,38 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: hysteria20
+  type: hysteria2
+  server: 108.181.22.155
+  port: 48152
+  password: 8eb5dcd9
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: hysteria21
+  type: hysteria2
+  server: 167.160.90.252
+  port: 60930
+  password: fc4488ef
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: hysteria22
+  type: hysteria2
+  server: www2.dtku49.xyz
+  port: 54406
+  password: ebcbb37b
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: hysteria23
+  type: hysteria2
+  server: www.dtku48.xyz
+  port: 50411
+  password: abab0600
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - name: reality1
   type: vless
   server: 108.181.22.140
@@ -221,6 +253,10 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
+  - hysteria20
+  - hysteria21
+  - hysteria22
+  - hysteria23
   - reality1
 - name: 自动选择
   type: url-test
@@ -243,6 +279,10 @@ proxy-groups:
   - hysteria1
   - hysteria2
   - hysteria3
+  - hysteria20
+  - hysteria21
+  - hysteria22
+  - hysteria23
   - reality1
 rules:
 - DOMAIN,clash.razord.top,DIRECT

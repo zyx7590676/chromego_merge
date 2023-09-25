@@ -135,6 +135,52 @@ except Exception as e:
     print(f"Error reading file: {e}")
 
 
+#歇斯底里节点 json处理
+try:
+    with open("./urls/hysteria2_urls.txt", "r") as file:
+        urls = file.read().splitlines()
+
+    # 遍历每个网址
+    for index, url in enumerate(urls):
+        try:
+            # 使用适当的方法从网址中获取内容，这里使用urllib库示例
+            response = urllib.request.urlopen(url)
+            data = response.read().decode("utf-8")
+            json_data = json.loads(data)
+
+            # 提取所需字段
+            auth = json_data["auth"]
+            server_ports = json_data["server"]
+            server_ports_slt = server_ports.split(":")
+            server = server_ports_slt[0]
+            ports = server_ports_slt[1]
+            ports_slt = ports.split(",")
+            server_port = int(ports_slt[0])
+            fast_open = json_data["fastOpen"]
+            insecure = json_data["tls"]["insecure"]
+            sni = json_data["tls"]["sni"]
+            name = f"hysteria2{index}"
+
+            # 创建当前网址的proxy字典
+            proxy = {
+                "name": name,
+                "type": "hysteria2",
+                "server": server,
+                "port": server_port,
+                "password": auth,
+                "fast-open": fast_open,
+                "sni": sni,
+                "skip-cert-verify": insecure
+            }
+
+            # 将当前proxy字典添加到所有proxies列表中
+            merged_proxies.append(proxy)
+        except Exception as e:
+            print(f"Error processing URL {url}: {e}")
+except Exception as e:
+    print(f"Error reading file: {e}")
+
+
 # xray json reality节点处理
 try:
     with open("./urls/reality_urls.txt", "r") as file:
