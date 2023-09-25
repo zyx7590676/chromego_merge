@@ -1,5 +1,5 @@
-naive+https://dongtaiwang.com:dongtaiwang.com@naive14.cfcdn3.xyz:443
 naive+https://dongtaiwang.com:dongtaiwang.com@www.dtku48.xyz:443
+naive+https://dongtaiwang.com:dongtaiwang.com@naive14.cfcdn3.xyz:443
 hysteria://167.160.91.115:13928?peer=paypal.com&auth=BF0LL4L2jlqSdW3KxjQv81AiFFjj90vWRHeUoqUuTVPeDAGvq3&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria0
 hysteria://173.234.25.52:20164?peer=www.microsoft.com&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria1
 hysteria://173.234.25.52:20164?peer=www.microsoft.com&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#hysteria2
