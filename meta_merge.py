@@ -1,201 +1,159 @@
 import yaml
-import codecs
 import json
 import urllib.request
-# 定义一个空列表用于存储合并后的代理配置
-merged_proxies = []
-# 获取clash文本中的内容
-try:
-    with open('./urls/clash_urls.txt', 'r') as file:
-        urls = file.read().splitlines()
+import logging
 
-    # 遍历每个网址
-    for index, url in enumerate(urls):
-        try:
-            # 使用适当的方法从网址中获取内容，这里使用urllib库示例
-            response = urllib.request.urlopen(url)
-            data = response.read().decode('utf-8')
+# 提取节点
+def process_urls(url_file, processor):
+    try:
+        with open(url_file, 'r') as file:
+            urls = file.read().splitlines()
 
-            # 解析YAML格式的内容
-            content = yaml.safe_load(data)
+        for index, url in enumerate(urls):
+            try:
+                response = urllib.request.urlopen(url)
+                data = response.read().decode('utf-8')
+                processor(data, index)
+            except Exception as e:
+                logging.error(f"Error processing URL {url}: {e}")
+    except Exception as e:
+        logging.error(f"Error reading file {url_file}: {e}")
+#提取clash节点
+def process_clash(data, index):
+    content = yaml.safe_load(data)
+    proxies = content.get('proxies', [])
+    for i, proxy in enumerate(proxies):
+        proxy['name'] = f"meta_{proxy['type']}_{index}{i+1}"
+        if proxy['type'] == 'hysteria':
+            proxy['up'] = 80
+            proxy['down'] = 100
+    merged_proxies.extend(proxies)
 
-            # 提取proxies部分并合并到merged_proxies中
-            proxies = content.get('proxies', [])
+def process_shadowtls(data, index):
+    try:
+        json_data = json.loads(data)
+        # 处理 shadowtls 数据
 
-            # 修改proxies数组中的每个代理项的'name'属性为序号
-            for i, proxy in enumerate(proxies):
-                proxy['name'] = "m"+proxy['type']+str(index)+str(i + 1 )
-                if proxy['type'] == 'hysteria':
-                    proxy['up'] = 30
-                    proxy['down'] = 80
-            merged_proxies.extend(proxies)
-        except Exception as e:
-            print(f"Error processing URL {url}: {e}")
-except Exception as e:
-    print(f"Error reading file: {e}")
-
-
-# shadowtls singbox节点处理
-# try:
-#     with open("./urls/shadowtls_urls.txt", "r") as file:
-#         urls = file.read().splitlines()
-
-#     # 遍历每个网址
-#     for index, url in enumerate(urls):
-#         try:
-#             # 使用适当的方法从网址中获取内容，这里使用urllib库示例
-#             response = urllib.request.urlopen(url)
-#             data = response.read().decode("utf-8")
-#             json_data = json.loads(data)
-
-#             # 提取所需字段
-#             method = json_data["outbounds"][0]["method"]
-#             password = json_data["outbounds"][0]["password"]
-#             server = json_data["outbounds"][1]["server"]
-#             server_port = json_data["outbounds"][1]["server_port"]
-#             server_name = json_data["outbounds"][1]["tls"]["server_name"]
-#             name = f"shadowtls{index}"
-#             # 创建当前网址的proxy字典
-#             proxy = {
-#                 "name": name,
-#                 "type": "ss",
-#                 "server": server,
-#                 "port": server_port,
-#                 "cipher": method,
-#                 "password": password,
-#                 "plugin": "shadow-tls",
-#                 "client-fingerprint": "chrome",
-#                 "plugin-opts": {
-#                     "host": server_name,
-#                     "password": "",
-#                     "version": 1
-#                 }
-#             }
-
-#             # 将当前proxy字典添加到所有proxies列表中
-#             merged_proxies.append(proxy)
-#         except Exception as e:
-#             print(f"Error processing URL {url}: {e}")
-# except Exception as e:
-#     print(f"Error reading file: {e}")
-#歇斯底里节点 json处理
-try:
-    with open("./urls/hysteria_urls.txt", "r") as file:
-        urls = file.read().splitlines()
-
-    # 遍历每个网址
-    for index, url in enumerate(urls):
-        try:
-            # 使用适当的方法从网址中获取内容，这里使用urllib库示例
-            response = urllib.request.urlopen(url)
-            data = response.read().decode("utf-8")
-            json_data = json.loads(data)
-
-            # 提取所需字段
-            auth = json_data["auth_str"]
-            server_ports = json_data["server"]
-            server_ports_slt = server_ports.split(":")
-            server = server_ports_slt[0]
-            ports = server_ports_slt[1]
-            ports_slt = ports.split(",")
-            server_port = int(ports_slt[0])
-            if len(ports_slt) > 1:
-                mport = ports_slt[1]
-            else:
-                mport = server_port
-            fast_open = json_data["fast_open"]
-            insecure = json_data["insecure"]
-            server_name = json_data["server_name"]
-            alpn = json_data["alpn"]
-            protocol = json_data["protocol"]
-            name = f"hysteria{index}"
-
-            # 创建当前网址的proxy字典
-            proxy = {
-                "name": name,
-                "type": "hysteria",
-                "server": server,
-                "port": server_port,
-                "ports": mport,
-                "auth_str": auth,
-                "up": 11,
-                "down": 55,
-                "fast-open": fast_open,
-                "protocol": protocol,
-                "sni": server_name,
-                "skip-cert-verify": insecure,
-                "alpn": [alpn]
+        # 提取所需字段
+        method = json_data["outbounds"][0]["method"]
+        password = json_data["outbounds"][0]["password"]
+        server = json_data["outbounds"][1]["server"]
+        server_port = json_data["outbounds"][1]["server_port"]
+        server_name = json_data["outbounds"][1]["tls"]["server_name"]
+        name = f"shadowtls_{index}"
+        # 创建当前网址的proxy字典
+        proxy = {
+            "name": name,
+            "type": "ss",
+            "server": server,
+            "port": server_port,
+            "cipher": method,
+            "password": password,
+            "plugin": "shadow-tls",
+            "client-fingerprint": "chrome",
+            "plugin-opts": {
+                "host": server_name,
+                "password": "",
+                "version": 1
             }
+        }
 
-            # 将当前proxy字典添加到所有proxies列表中
-            merged_proxies.append(proxy)
-        except Exception as e:
-            print(f"Error processing URL {url}: {e}")
-except Exception as e:
-    print(f"Error reading file: {e}")
+        # 将当前proxy字典添加到所有proxies列表中
+        merged_proxies.append(proxy)
 
+    except Exception as e:
+        logging.error(f"Error processing shadowtls data for index {index}: {e}")
 
-#歇斯底里节点 json处理
-try:
-    with open("./urls/hysteria2_urls.txt", "r") as file:
-        urls = file.read().splitlines()
+def process_hysteria(data, index):
+    try:
+        json_data = json.loads(data)
+        # 处理 hysteria 数据
+        # 提取所需字段
+        auth = json_data["auth_str"]
+        server_ports = json_data["server"]
+        server_ports_slt = server_ports.split(":")
+        server = server_ports_slt[0]
+        ports = server_ports_slt[1]
+        ports_slt = ports.split(",")
+        server_port = int(ports_slt[0])
+        if len(ports_slt) > 1:
+            mport = ports_slt[1]
+        else:
+            mport = server_port
+        fast_open = json_data["fast_open"]
+        insecure = json_data["insecure"]
+        server_name = json_data["server_name"]
+        alpn = json_data["alpn"]
+        protocol = json_data["protocol"]
+        name = f"hysteria_{index}"
 
-    # 遍历每个网址
-    for index, url in enumerate(urls):
-        try:
-            # 使用适当的方法从网址中获取内容，这里使用urllib库示例
-            response = urllib.request.urlopen(url)
-            data = response.read().decode("utf-8")
-            json_data = json.loads(data)
+        # 创建当前网址的proxy字典
+        proxy = {
+            "name": name,
+            "type": "hysteria",
+            "server": server,
+            "port": server_port,
+            "ports": mport,
+            "auth_str": auth,
+            "up": 80,
+            "down": 100,
+            "fast-open": fast_open,
+            "protocol": protocol,
+            "sni": server_name,
+            "skip-cert-verify": insecure,
+            "alpn": [alpn]
+        }
 
-            # 提取所需字段
-            auth = json_data["auth"]
-            server_ports = json_data["server"]
-            server_ports_slt = server_ports.split(":")
-            server = server_ports_slt[0]
-            ports = server_ports_slt[1]
-            ports_slt = ports.split(",")
-            server_port = int(ports_slt[0])
-            fast_open = json_data["fastOpen"]
-            insecure = json_data["tls"]["insecure"]
-            sni = json_data["tls"]["sni"]
-            name = f"hysteria2{index}"
+        # 将当前proxy字典添加到所有proxies列表中
+        merged_proxies.append(proxy)
 
-            # 创建当前网址的proxy字典
-            proxy = {
-                "name": name,
-                "type": "hysteria2",
-                "server": server,
-                "port": server_port,
-                "password": auth,
-                "fast-open": fast_open,
-                "sni": sni,
-                "skip-cert-verify": insecure
-            }
+    except Exception as e:
+        logging.error(f"Error processing hysteria data for index {index}: {e}")
+# 处理hysteria2
+def process_hysteria2(data, index):
+    try:
+        json_data = json.loads(data)
+        # 处理 hysteria2 数据
+        # 提取所需字段
+        auth = json_data["auth"]
+        server_ports = json_data["server"]
+        server_ports_slt = server_ports.split(":")
+        server = server_ports_slt[0]
+        ports = server_ports_slt[1]
+        ports_slt = ports.split(",")
+        server_port = int(ports_slt[0])
+        fast_open = json_data["fastOpen"]
+        insecure = json_data["tls"]["insecure"]
+        sni = json_data["tls"]["sni"]
+        name = f"hysteria2_{index}"
 
-            # 将当前proxy字典添加到所有proxies列表中
-            merged_proxies.append(proxy)
-        except Exception as e:
-            print(f"Error processing URL {url}: {e}")
-except Exception as e:
-    print(f"Error reading file: {e}")
+        # 创建当前网址的proxy字典
+        proxy = {
+            "name": name,
+            "type": "hysteria2",
+            "server": server,
+            "port": server_port,
+            "password": auth,
+            "fast-open": fast_open,
+            "sni": sni,
+            "skip-cert-verify": insecure
+        }
 
+        # 将当前proxy字典添加到所有proxies列表中
+        merged_proxies.append(proxy)
 
-# xray json reality节点处理
-try:
-    with open("./urls/reality_urls.txt", "r") as file:
-        urls = file.read().splitlines()
+    except Exception as e:
+        logging.error(f"Error processing hysteria2 data for index {index}: {e}")
 
-    # 遍历每个网址
-    for index, url in enumerate(urls):
-        try:
-            # 使用适当的方法从网址中获取内容，这里使用urllib库示例
-            response = urllib.request.urlopen(url)
-            data = response.read().decode("utf-8")
-            json_data = json.loads(data)
-
-            # 提取所需字段
-            protocol = json_data["outbounds"][0]["protocol"]
+#处理xray
+def process_xray(data, index):
+    try:
+        json_data = json.loads(data)
+        # 处理 xray 数据
+        protocol = json_data["outbounds"][0]["protocol"]
+        #vless操作
+        if protocol == "vless":
+        # 提取所需字段
             server = json_data["outbounds"][0]["settings"]["vnext"][0]["address"]
             port = json_data["outbounds"][0]["settings"]["vnext"][0]["port"]
             uuid = json_data["outbounds"][0]["settings"]["vnext"][0]["users"][0]["id"]
@@ -209,7 +167,7 @@ try:
             fingerprint = json_data["outbounds"][0]["streamSettings"]["realitySettings"]["fingerprint"]
             # udp转发
             isudp = True
-            name = f"reality{index}"
+            name = f"reality_{index}"
             
             # 根据network判断tcp
             if network == "tcp":
@@ -254,43 +212,60 @@ try:
                         "public-key": publicKey,
                         "short-id": shortId}
                 }
-            else:
-                print(f"其他协议还未支持 URL {url}")
-                proxy={}
-                continue
-            
-            # 将当前proxy字典添加到所有proxies列表中
-            merged_proxies.append(proxy)
-        except Exception as e:
-            print(f"Error processing URL {url}: {e}")
-except Exception as e:
-    print(f"Error reading file: {e}")
 
+        # 将当前proxy字典添加到所有proxies列表中
+        merged_proxies.append(proxy)
+    except Exception as e:
+        logging.error(f"Error processing xray data for index {index}: {e}")
 
+def update_proxy_groups(config_data, merged_proxies):
+    for group in config_data['proxy-groups']:
+        if group['name'] in ['自动选择', '节点选择']:
+            group['proxies'].extend(proxy['name'] for proxy in merged_proxies)
+
+def update_warp_proxy_groups(config_warp_data, merged_proxies):
+    for group in config_warp_data['proxy-groups']:
+        if group['name'] in ['自动选择', '手动选择', '负载均衡']:
+            group['proxies'].extend(proxy['name'] for proxy in merged_proxies)
+# 定义一个空列表用于存储合并后的代理配置
+merged_proxies = []
+
+# 处理 clash URLs
+process_urls('./urls/clash_urls.txt', process_clash)
+
+# 处理 shadowtls URLs
+#process_urls('./urls/shadowtls_urls.txt', process_shadowtls)
+
+# 处理 hysteria URLs
+process_urls('./urls/hysteria_urls.txt', process_hysteria)
+
+# 处理 hysteria2 URLs
+process_urls('./urls/hysteria2_urls.txt', process_hysteria2)
+
+# 处理 xray URLs
+process_urls('./urls/reality_urls.txt', process_xray)
 
 # 读取普通的配置文件内容
-with codecs.open('./templates/clash_template.yaml', 'r', encoding='utf-8') as file:
+with open('./templates/clash_template.yaml', 'r', encoding='utf-8') as file:
     config_data = yaml.safe_load(file)
 
 # 读取warp配置文件内容
-with codecs.open('./templates/clash_warp_template.yaml', 'r', encoding='utf-8') as file:
+with open('./templates/clash_warp_template.yaml', 'r', encoding='utf-8') as file:
     config_warp_data = yaml.safe_load(file)
 
 # 添加合并后的代理到proxies部分
 config_data['proxies'].extend(merged_proxies)
 config_warp_data['proxies'].extend(merged_proxies)
-# 更新自动选择和节点选择的proxies的name部分
-for group in config_data['proxy-groups']:
-    if group['name'] == '自动选择' or group['name'] == '节点选择':
-        group['proxies'].extend(proxy['name'] for proxy in merged_proxies)
 
-for group in config_warp_data['proxy-groups']:
-    if group['name'] == '自动选择' or group['name'] == '手动选择' or group['name'] == '负载均衡':
-        group['proxies'].extend(proxy['name'] for proxy in merged_proxies)
+# 更新自动选择和节点选择的proxies的name部分
+update_proxy_groups(config_data, merged_proxies)
+update_warp_proxy_groups(config_warp_data, merged_proxies)
 
 # 将更新后的数据写入到一个YAML文件中，并指定编码格式为UTF-8
-with codecs.open('./sub/merged_proxies.yaml', 'w', encoding='utf-8') as file:
+with open('./sub/merged_proxies.yaml', 'w', encoding='utf-8') as file:
     yaml.dump(config_data, file, sort_keys=False, allow_unicode=True)
-with codecs.open('./sub/merged_warp_proxies.yaml', 'w', encoding='utf-8') as file:
+
+with open('./sub/merged_warp_proxies.yaml', 'w', encoding='utf-8') as file:
     yaml.dump(config_warp_data, file, sort_keys=False, allow_unicode=True)
-print("聚合成狗")
+
+print("聚合完成")

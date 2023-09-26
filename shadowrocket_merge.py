@@ -288,6 +288,7 @@ try:
                     ssr_source=base64.b64encode(ssr_source.encode()).decode()
                     ssr_meta = f"ssr://{ssr_source}"
                     merged_proxies.append(ssr_meta)
+
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
 except Exception as e:
