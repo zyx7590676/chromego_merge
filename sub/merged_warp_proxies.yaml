@@ -142,12 +142,19 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: mss91
-  type: ss
-  server: www.dtku49.xyz
-  port: 10382
-  password: c6WFCUqSAe/otYPfVUve3lK6LIjyge3A+s9GST7QQ+c=
-  cipher: 2022-blake3-aes-256-gcm
+- name: mtuic91
+  type: tuic
+  server: tuic1.dtku47.xyz
+  port: 23788
+  udp: true
+  uuid: ae02b441-c64b-46d3-bdc4-c0f578b1db22
+  password: xLDZTVuo3cjI
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: hysteria0
   type: hysteria
   server: 167.160.91.115
@@ -250,7 +257,7 @@ proxy-groups:
   - mss61
   - mhysteria71
   - mvless81
-  - mss91
+  - mtuic91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -269,7 +276,7 @@ proxy-groups:
   - mss61
   - mhysteria71
   - mvless81
-  - mss91
+  - mtuic91
   - hysteria0
   - hysteria1
   - hysteria2
@@ -288,7 +295,7 @@ proxy-groups:
   - mss61
   - mhysteria71
   - mvless81
-  - mss91
+  - mtuic91
   - hysteria0
   - hysteria1
   - hysteria2
