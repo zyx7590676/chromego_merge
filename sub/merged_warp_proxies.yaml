@@ -51,30 +51,12 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: meta_ssr_01
-  type: ssr
-  server: 108.181.22.133
-  port: 30002
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
-- name: meta_ssr_02
-  type: ssr
-  server: 108.181.22.133
-  port: 30003
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
-- name: meta_ssr_03
-  type: ssr
-  server: 108.181.22.133
-  port: 30004
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+- name: meta_ss_01
+  type: ss
+  server: 108.181.22.130
+  port: 11256
+  cipher: 2022-blake3-chacha20-poly1305
+  password: +/b6Q+CbYg8b823kivADeViRHa7kdBprvhpyTk15QpY=
 - name: meta_hysteria_11
   type: hysteria
   server: clash1.dtku47.xyz
@@ -85,14 +67,16 @@ proxies:
   protocol: udp
   up: 80
   down: 100
-- name: meta_ssr_21
-  type: ssr
-  server: 108.181.22.133
-  port: 30002
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+- name: meta_hysteria_21
+  type: hysteria
+  server: hy1.dtku47.xyz
+  port: 11257
+  auth-str: oO5q7L6QPSuJ
+  alpn:
+  - h3
+  protocol: udp
+  up: 80
+  down: 100
 - name: meta_tuic_31
   server: tuic1.dtku47.xyz
   port: 22336
@@ -104,14 +88,16 @@ proxies:
   request-timeout: 8000
   udp-relay-mode: native
   congestion-controller: bbr
-- name: meta_ssr_41
-  type: ssr
-  server: 108.181.22.133
-  port: 30002
-  password: dongtaiwang.com
-  cipher: dummy
-  obfs: plain
-  protocol: auth_chain_a
+- name: meta_hysteria_41
+  type: hysteria
+  server: hy1.dtku47.xyz
+  port: 11257
+  auth-str: oO5q7L6QPSuJ
+  alpn:
+  - h3
+  protocol: udp
+  up: 80
+  down: 100
 - name: meta_tuic_51
   server: tuic1.dtku47.xyz
   port: 22336
@@ -223,38 +209,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: hysteria2_0
-  type: hysteria2
-  server: 108.181.22.155
-  port: 48152
-  password: 8eb5dcd9
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: hysteria2_1
-  type: hysteria2
-  server: 167.160.90.252
-  port: 60930
-  password: fc4488ef
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: hysteria2_2
-  type: hysteria2
-  server: www2.dtku49.xyz
-  port: 54406
-  password: ebcbb37b
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: hysteria2_3
-  type: hysteria2
-  server: www.dtku48.xyz
-  port: 50411
-  password: abab0600
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: reality_1
   type: vless
   server: 108.181.22.140
@@ -292,13 +246,11 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - meta_ssr_01
-  - meta_ssr_02
-  - meta_ssr_03
+  - meta_ss_01
   - meta_hysteria_11
-  - meta_ssr_21
+  - meta_hysteria_21
   - meta_tuic_31
-  - meta_ssr_41
+  - meta_hysteria_41
   - meta_tuic_51
   - meta_ss_61
   - meta_hysteria_71
@@ -308,22 +260,16 @@ proxy-groups:
   - hysteria_1
   - hysteria_2
   - hysteria_3
-  - hysteria2_0
-  - hysteria2_1
-  - hysteria2_2
-  - hysteria2_3
   - reality_1
 - name: 手动选择
   type: select
   proxies:
   - 油管-绵阿羊
-  - meta_ssr_01
-  - meta_ssr_02
-  - meta_ssr_03
+  - meta_ss_01
   - meta_hysteria_11
-  - meta_ssr_21
+  - meta_hysteria_21
   - meta_tuic_31
-  - meta_ssr_41
+  - meta_hysteria_41
   - meta_tuic_51
   - meta_ss_61
   - meta_hysteria_71
@@ -333,22 +279,16 @@ proxy-groups:
   - hysteria_1
   - hysteria_2
   - hysteria_3
-  - hysteria2_0
-  - hysteria2_1
-  - hysteria2_2
-  - hysteria2_3
   - reality_1
 - name: 负载均衡
   type: load-balance
   proxies:
   - 油管-绵阿羊
-  - meta_ssr_01
-  - meta_ssr_02
-  - meta_ssr_03
+  - meta_ss_01
   - meta_hysteria_11
-  - meta_ssr_21
+  - meta_hysteria_21
   - meta_tuic_31
-  - meta_ssr_41
+  - meta_hysteria_41
   - meta_tuic_51
   - meta_ss_61
   - meta_hysteria_71
@@ -358,10 +298,6 @@ proxy-groups:
   - hysteria_1
   - hysteria_2
   - hysteria_3
-  - hysteria2_0
-  - hysteria2_1
-  - hysteria2_2
-  - hysteria2_3
   - reality_1
   url: http://www.gstatic.com/generate_204
   interval: 300
