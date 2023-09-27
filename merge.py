@@ -79,13 +79,14 @@ def process_clash(data, index):
                     server = proxy["server"]
                     port = proxy["port"]
                     udp = proxy["udp"]
-                    uuid = proxy['uuid']
-                    password = proxy['password']
-                    alpn = proxy["alpn"][0]
-                    #disable_sni = proxy["disable-sni"]
-                    udp_relay_mode = proxy['udp-relay-mode']
-                    congestion =   proxy['congestion-controller']
-                    tuic_meta = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure=1&alpn={alpn}&mode={udp_relay_mode}"
+                    uuid = proxy.get("uuid", "")
+                    password = proxy.get("password", "")
+                    sni = proxy.get("sni", "")
+                    insecure = int(proxy.get("skip-cert-verify", 0))
+                    udp_relay_mode = proxy.get("udp-relay-mode", "bbr")
+                    congestion = proxy.get("congestion-controller", "")
+                    tuic_meta = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure={insecure}&alpn={alpn}&mode={udp_relay_mode}"
+                    
                     merged_proxies.append(tuic_meta)
                     merged_proxies_neko.append(tuic_meta)
                 elif proxy['type'] == "hysteria2":
