@@ -199,7 +199,7 @@ def process_hysteria2(data, index):
         # 生成URL
         hysteria2 = f"hysteria2://{auth}@{server}?insecure={insecure}&sni={sni}#hysteria2_{index}"
         merged_proxies_neko.append(hysteria2)
-
+        merged_proxies.append(hysteria2)
     except Exception as e:
         logging.error(f"Error processing hysteria2 data for index {index}: {e}")
 
