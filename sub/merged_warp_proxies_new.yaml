@@ -74,9 +74,15 @@ proxies:
   skip-cert-verify: true
 - name: meta_hysteria2_31
   type: hysteria2
+<<<<<<< HEAD
   server: 108.181.22.205
   port: 10194
   password: 87dc8c2e
+=======
+  server: 108.181.17.116
+  port: 12309
+  password: ca7a7db6
+>>>>>>> 8e080e9ce04a9b982981638bd4ad90a80d6d8d24
   sni: www.bing.com
   skip-cert-verify: true
 - name: meta_hysteria2_41
@@ -88,9 +94,15 @@ proxies:
   skip-cert-verify: true
 - name: meta_hysteria2_51
   type: hysteria2
+<<<<<<< HEAD
   server: 108.181.22.205
   port: 10194
   password: 87dc8c2e
+=======
+  server: 108.181.17.116
+  port: 12309
+  password: ca7a7db6
+>>>>>>> 8e080e9ce04a9b982981638bd4ad90a80d6d8d24
   sni: www.bing.com
   skip-cert-verify: true
 - name: meta_hysteria_61
@@ -350,7 +362,10 @@ proxy-groups:
   - meta_hysteria_131
   - meta_vless_141
   - meta_tuic_151
+<<<<<<< HEAD
   - shadowtls_0
+=======
+>>>>>>> 8e080e9ce04a9b982981638bd4ad90a80d6d8d24
   - hysteria_0
   - hysteria_1
   - hysteria_2
@@ -380,7 +395,10 @@ proxy-groups:
   - meta_hysteria_131
   - meta_vless_141
   - meta_tuic_151
+<<<<<<< HEAD
   - shadowtls_0
+=======
+>>>>>>> 8e080e9ce04a9b982981638bd4ad90a80d6d8d24
   - hysteria_0
   - hysteria_1
   - hysteria_2
@@ -410,7 +428,10 @@ proxy-groups:
   - meta_hysteria_131
   - meta_vless_141
   - meta_tuic_151
+<<<<<<< HEAD
   - shadowtls_0
+=======
+>>>>>>> 8e080e9ce04a9b982981638bd4ad90a80d6d8d24
   - hysteria_0
   - hysteria_1
   - hysteria_2
