@@ -40,6 +40,8 @@ def process_shadowtls(data, index):
         server = json_data["outbounds"][1]["server"]
         server_port = json_data["outbounds"][1]["server_port"]
         server_name = json_data["outbounds"][1]["tls"]["server_name"]
+        shadowtls_password = json_data["outbounds"][1]["password"]
+        version = json_data["outbounds"][1]["version"]
         name = f"shadowtls_{index}"
         # 创建当前网址的proxy字典
         proxy = {
@@ -53,8 +55,8 @@ def process_shadowtls(data, index):
             "client-fingerprint": "chrome",
             "plugin-opts": {
                 "host": server_name,
-                "password": "",
-                "version": 1
+                "password": shadowtls_password,
+                "version": int(version)
             }
         }
 
@@ -234,7 +236,7 @@ merged_proxies = []
 process_urls('./urls/clash_new_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
-#process_urls('./urls/shadowtls_urls.txt', process_shadowtls)
+process_urls('./urls/shadowtls_urls.txt', process_shadowtls)
 
 # 处理 hysteria URLs
 process_urls('./urls/hysteria_urls.txt', process_hysteria)
