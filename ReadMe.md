@@ -28,12 +28,22 @@ chromego如果更新我会及时修改代码保证代码可用，如果更新不
 
 ## 订阅链接分享(无需翻墙版-托管自netlify）
 ### 不套warp版本（clashmeta-全平台通用-节点最全）
+**不含hysteria2节点**
 ```
 https://mareep.netlify.app/sub/merged_proxies.yaml
 ```
+**含hysteria2节点**
+```
+https://mareep.netlify.app/sub/merged_proxies_new.yaml
+```
 ### 套warp版本（clashmeta-全平台通用-节点最全)
+**不含hysteria2节点**
 ```
 https://mareep.netlify.app/sub/merged_warp_proxies.yaml
+```
+**含hysteria2节点**
+```
+https://mareep.netlify.app/sub/merged_warp_proxies_new.yaml
 ```
 ### shadowrocket订阅链接-节点较全
 ```

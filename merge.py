@@ -88,6 +88,15 @@ def process_clash(data, index):
                     tuic_meta = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure=1&alpn={alpn}&mode={udp_relay_mode}"
                     merged_proxies.append(tuic_meta)
                     merged_proxies_neko.append(tuic_meta)
+                elif proxy['type'] == 'hysteria2':
+                    server = proxy["server"]
+                    port = proxy["port"]
+                    auth = proxy["password"]
+                    sni = proxy["sni"]
+                    insecure = int(proxy["skip-cert-verify"])
+                    hy2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}#hysteria2_meta_{index}"
+                    merged_proxies.append(hy2_meta)
+                    merged_proxies_neko.append(hy2_meta)
                 elif proxy['type'] == 'hysteria':
                     server = proxy["server"]           
                     mport = str(proxy["port"])
@@ -254,7 +263,7 @@ def update_warp_proxy_groups(config_warp_data, merged_proxies):
 merged_proxies = []
 merged_proxies_neko = []
 # 处理 clash URLs
-process_urls('./urls/clash_urls.txt', process_clash)
+process_urls('./urls/clash_new_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
 process_urls('./urls/shadowtls_urls.txt', process_shadowtls)
