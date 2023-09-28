@@ -204,7 +204,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: reality_1
+- name: reality_0
   type: vless
   server: 108.181.22.140
   port: 23694
@@ -255,7 +255,7 @@ proxy-groups:
   - hysteria_1
   - hysteria_2
   - hysteria_3
-  - reality_1
+  - reality_0
 - name: 手动选择
   type: select
   proxies:
@@ -274,7 +274,7 @@ proxy-groups:
   - hysteria_1
   - hysteria_2
   - hysteria_3
-  - reality_1
+  - reality_0
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -293,7 +293,7 @@ proxy-groups:
   - hysteria_1
   - hysteria_2
   - hysteria_3
-  - reality_1
+  - reality_0
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin

@@ -187,18 +187,6 @@ proxies:
   port: 10088
   password: x3jy8UXDQj6OPEL/MLXqqtPqmidNFNbHzXo91Wd8tiw=
   cipher: 2022-blake3-chacha20-poly1305
-- name: shadowtls_0
-  type: ss
-  server: www.dtku50.xyz
-  port: 443
-  cipher: 2022-blake3-chacha20-poly1305
-  password: BuzObm3GemcBeQLSFFoYT7L3yLvrtEp3VW4GgbJqOM0=
-  plugin: shadow-tls
-  client-fingerprint: chrome
-  plugin-opts:
-    host: nijigen-works.jp
-    password: BYHdsgQYw5jB/pRu5D5jJ+tTd9SdEtU03nYjP5LdxQ8=
-    version: 3
 - name: hysteria_0
   type: hysteria
   server: 167.160.91.115
@@ -287,7 +275,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: reality_1
+- name: reality_0
   type: vless
   server: 108.181.22.140
   port: 23694
@@ -324,7 +312,6 @@ proxy-groups:
   - meta_hysteria_131
   - meta_vless_141
   - meta_ss_151
-  - shadowtls_0
   - hysteria_0
   - hysteria_1
   - hysteria_2
@@ -333,7 +320,7 @@ proxy-groups:
   - hysteria2_1
   - hysteria2_2
   - hysteria2_3
-  - reality_1
+  - reality_0
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -357,7 +344,6 @@ proxy-groups:
   - meta_hysteria_131
   - meta_vless_141
   - meta_ss_151
-  - shadowtls_0
   - hysteria_0
   - hysteria_1
   - hysteria_2
@@ -366,7 +352,7 @@ proxy-groups:
   - hysteria2_1
   - hysteria2_2
   - hysteria2_3
-  - reality_1
+  - reality_0
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
