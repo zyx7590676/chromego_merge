@@ -33,64 +33,14 @@ proxies:
   udp: true
   sni: gw.alicdn.com
   skip-cert-verify: true
-- name: meta_vless_01
-  type: vless
-  server: 192.227.206.102
-  port: 443
-  uuid: 16a97d42-b9bd-40b4-99f0-c54bb401bd07
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0EQPdyAWUkq0hIgFA74IPpjZhkk4gwksa2YFK56DCRs
-    short-id: 27cf3ad8b2c8009e
-- name: meta_vmess_02
-  type: vmess
-  server: speed.cloudflare.com
-  port: 443
-  uuid: 4d206030-6221-45d2-a792-d7281e31bdfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  servername: char-variables-searched-pathology.trycloudflare.com
-  network: ws
-  ws-opts:
-    path: 84e2823fae42
-    headers:
-      Host: char-variables-searched-pathology.trycloudflare.com
-- name: meta_vmess_03
-  type: vmess
-  server: speed.cloudflare.com
-  port: 443
-  uuid: 4d206030-6221-45d2-a792-d7281e31bdfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  servername: char-variables-searched-pathology.trycloudflare.com
-  network: ws
-  ws-opts:
-    path: 84e2823fae42
-    headers:
-      Host: char-variables-searched-pathology.trycloudflare.com
-    max-early-data: 2048
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: meta_hysteria2_11
+- name: meta_hysteria2_01
   type: hysteria2
   server: 108.181.17.116
   port: 12309
   password: ca7a7db6
   sni: www.bing.com
   skip-cert-verify: true
-- name: meta_hysteria_21
+- name: meta_hysteria_11
   type: hysteria
   server: www.dtku46.xyz
   port: 11223
@@ -101,7 +51,7 @@ proxies:
   up: 80
   down: 100
   skip-cert-verify: true
-- name: meta_tuic_31
+- name: meta_tuic_21
   server: tuic3.dtku47.xyz
   port: 12255
   type: tuic
@@ -112,14 +62,14 @@ proxies:
   request-timeout: 8000
   udp-relay-mode: native
   congestion-controller: bbr
-- name: meta_hysteria2_41
+- name: meta_hysteria2_31
   type: hysteria2
   server: 108.181.22.205
   port: 10194
   password: 87dc8c2e
   sni: www.bing.com
   skip-cert-verify: true
-- name: meta_vless_51
+- name: meta_vless_41
   type: vless
   server: www.dtku46.xyz
   port: 21116
@@ -133,14 +83,14 @@ proxies:
     public-key: mMOWuVq1mFtGQwT3dPw9ZpIQoA5Ft2lG-_xhVSJDUlw
     short-id: 6ba85179e30d4fc2
   client-fingerprint: chrome
-- name: meta_hysteria2_61
+- name: meta_hysteria2_51
   type: hysteria2
   server: 108.181.22.205
   port: 10194
   password: 87dc8c2e
   sni: www.bing.com
   skip-cert-verify: true
-- name: meta_hysteria_71
+- name: meta_hysteria_61
   type: hysteria
   server: hy2.dtku47.xyz
   port: 15566
@@ -150,7 +100,7 @@ proxies:
   protocol: udp
   up: 80
   down: 100
-- name: meta_hysteria_81
+- name: meta_hysteria_71
   type: hysteria
   server: clash1.dtku47.xyz
   port: 11223
@@ -160,11 +110,21 @@ proxies:
   protocol: udp
   up: 80
   down: 100
-- name: meta_hysteria_91
+- name: meta_hysteria_81
   type: hysteria
   server: hy2.dtku47.xyz
   port: 15566
   auth-str: jQrGpwSqp34P
+  alpn:
+  - h3
+  protocol: udp
+  up: 80
+  down: 100
+- name: meta_hysteria_91
+  type: hysteria
+  server: hy1.dtku47.xyz
+  port: 22334
+  auth-str: lASdKzWK0VxL
   alpn:
   - h3
   protocol: udp
@@ -172,16 +132,6 @@ proxies:
   down: 100
 - name: meta_hysteria_101
   type: hysteria
-  server: hy1.dtku47.xyz
-  port: 22334
-  auth-str: lASdKzWK0VxL
-  alpn:
-  - h3
-  protocol: udp
-  up: 80
-  down: 100
-- name: meta_hysteria_111
-  type: hysteria
   server: hy2.dtku47.xyz
   port: 15566
   auth-str: jQrGpwSqp34P
@@ -190,7 +140,7 @@ proxies:
   protocol: udp
   up: 80
   down: 100
-- name: meta_hysteria_121
+- name: meta_hysteria_111
   type: hysteria
   server: hy1.dtku47.xyz
   port: 22334
@@ -200,13 +150,13 @@ proxies:
   protocol: udp
   up: 80
   down: 100
-- name: meta_ss_131
+- name: meta_ss_121
   type: ss
   server: www2.dtku49.xyz
   port: 11105
   password: thqfFCl0zl4Wyc0FaKxTQw==
   cipher: 2022-blake3-aes-128-gcm
-- name: meta_hysteria_141
+- name: meta_hysteria_131
   type: hysteria
   server: www.dtku50.xyz
   port: 43250
@@ -218,7 +168,7 @@ proxies:
   auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
   up: 80
   down: 100
-- name: meta_vless_151
+- name: meta_vless_141
   type: vless
   server: 45.150.165.61
   port: 25678
@@ -231,7 +181,7 @@ proxies:
   reality-opts:
     public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
   client-fingerprint: chrome
-- name: meta_ss_161
+- name: meta_ss_151
   type: ss
   server: www3.dtku49.xyz
   port: 10088
@@ -358,25 +308,22 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - 油管-绵阿羊
-  - meta_vless_01
-  - meta_vmess_02
-  - meta_vmess_03
-  - meta_hysteria2_11
-  - meta_hysteria_21
-  - meta_tuic_31
-  - meta_hysteria2_41
-  - meta_vless_51
-  - meta_hysteria2_61
+  - meta_hysteria2_01
+  - meta_hysteria_11
+  - meta_tuic_21
+  - meta_hysteria2_31
+  - meta_vless_41
+  - meta_hysteria2_51
+  - meta_hysteria_61
   - meta_hysteria_71
   - meta_hysteria_81
   - meta_hysteria_91
   - meta_hysteria_101
   - meta_hysteria_111
-  - meta_hysteria_121
-  - meta_ss_131
-  - meta_hysteria_141
-  - meta_vless_151
-  - meta_ss_161
+  - meta_ss_121
+  - meta_hysteria_131
+  - meta_vless_141
+  - meta_ss_151
   - shadowtls_0
   - hysteria_0
   - hysteria_1
@@ -394,25 +341,22 @@ proxy-groups:
   tolerance: 50
   proxies:
   - 油管-绵阿羊
-  - meta_vless_01
-  - meta_vmess_02
-  - meta_vmess_03
-  - meta_hysteria2_11
-  - meta_hysteria_21
-  - meta_tuic_31
-  - meta_hysteria2_41
-  - meta_vless_51
-  - meta_hysteria2_61
+  - meta_hysteria2_01
+  - meta_hysteria_11
+  - meta_tuic_21
+  - meta_hysteria2_31
+  - meta_vless_41
+  - meta_hysteria2_51
+  - meta_hysteria_61
   - meta_hysteria_71
   - meta_hysteria_81
   - meta_hysteria_91
   - meta_hysteria_101
   - meta_hysteria_111
-  - meta_hysteria_121
-  - meta_ss_131
-  - meta_hysteria_141
-  - meta_vless_151
-  - meta_ss_161
+  - meta_ss_121
+  - meta_hysteria_131
+  - meta_vless_141
+  - meta_ss_151
   - shadowtls_0
   - hysteria_0
   - hysteria_1
