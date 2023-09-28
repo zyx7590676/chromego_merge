@@ -31,78 +31,81 @@ def process_clash(data, index):
             for proxy in proxies:
                 # 如果类型是reality
                 if proxy['type'] == 'vless' :
-                    server = proxy['server']
-                    port  = proxy['port']
-                    udp = proxy['udp']
-                    uuid = proxy['uuid']
-                    tls = proxy['tls']
-                    serverName = proxy['servername']
-                    flow = proxy['flow']
-                    network = proxy['network']
-                    publicKey = proxy['reality-opts']['public-key']
-                    fp = proxy['client-fingerprint']
-                    reality_meta =  f"vless://{uuid}@{server}:{port}?security=reality&flow={flow}&type={network}&fp={fp}&pbk={publicKey}&sni={serverName}#reality_meta{index}"
-                    merged_proxies.append(reality_meta)
-                    merged_proxies_neko.append(reality_meta)
+                    server = proxy.get("server", "")
+                    port = int(proxy.get("port", 443))
+                    udp = proxy.get("udp", "")
+                    uuid = proxy.get("uuid", "")
+                    network = proxy.get("network", "")
+                    tls = int(proxy.get("tls", 0))
+                    xudp = proxy.get("xudp", "")
+                    sni = proxy.get("servername", "")
+                    flow = proxy.get("flow", "")
+                    publicKey = proxy.get('reality-opts', {}).get('public-key', '')
+                    short_id = proxy.get('reality-opts', {}).get('short-id', '')
+                    fp = proxy.get("client-fingerprint", "")
+                    insecure = int(proxy.get("skip-cert-verify", 0))
+                    grpc_serviceName = proxy.get('grpc-opts', {}).get('grpc-service-name', '')
+
+                    ws_path = proxy.get('ws-opts', {}).get('path', '')
+                    ws_headers_host = proxy.get('ws-opts', {}).get('headers', {}).get('Host', '')
+                    if tls == 0:
+                        security = 'none'
+                    elif tls == 1 and publicKey != '':
+                        security = 'reality'
+                    else:
+                        security = 'tls'
+                    vless_meta =  f"vless://{uuid}@{server}:{port}?security={security}&allowInsecure{insecure}&flow={flow}&type={network}&fp={fp}&pbk={publicKey}&sid={short_id}&sni={sni}&serviceName={grpc_serviceName}&path={ws_path}&host={ws_headers_host}#vless_meta_{index}"
+                    
+                    merged_proxies.append(vless_meta)
+                    merged_proxies_neko.append(vless_meta)
                 if proxy['type'] == 'vmess' :
-                    server = proxy['server']
-                    port  = proxy['port']
-                    cipher = proxy['cipher']
-                    uuid = proxy['uuid']
-                    alterId = proxy['alterId']
-                    tls = proxy['tls']
-                    server_name = proxy['servername']
-                    skip_cert_verify = proxy['skip-cert-verify']
-                    network = proxy['network']
-                    ws_path = proxy['ws-opts']['path']
-                    ws_headers_host = proxy['ws-opts']['headers']['host']
-                    data = {
-                        'add': server,
-                        'aid': alterId,
-                        'host': ws_headers_host,
-                        'id': uuid,
-                        'net': network,
-                        'path': ws_path,
-                        'port': port,
-                        'scy': cipher,
-                        'sni': server_name,
-                        'tls': '',
-                        'type': 'none',
-                        'v': '2'                        
-                    }
-                    json_str = json.dumps(data)
-                    json_str = base64.b64encode(json_str.encode()).decode()
-                    vmess_meta =  f"vmess://{json_str}"
+                    server = proxy.get("server", "")
+                    port = int(proxy.get("port", 443))
+                    uuid = proxy.get("uuid", "")
+                    #cipher = proxy.get("cipher", "")
+                    alterId = proxy.get("alterId", "")
+                    network = proxy.get("network", "")
+                    tls = int(proxy.get("tls", 0))
+                    if tls == 0:
+                        security = "none"
+                    elif tls == 1:
+                        security = "tls"
+                    sni = proxy.get("servername", "")
+                    ws_path = proxy.get('ws-opts', {}).get('path', '')
+                    ws_headers_host = proxy.get('ws-opts', {}).get('headers', {}).get('Host', '')
+
+                    vmess_meta =  f"vmess://{uuid}@{server}:{port}?security={security}&allowInsecure{insecure}&type={network}&fp={fp}&sni={sni}&path={ws_path}&host={ws_headers_host}#vmess_meta_{index}"
                     merged_proxies.append(vmess_meta)
                     merged_proxies_neko.append(vmess_meta)
                 elif proxy['type'] == 'tuic':
-                    server = proxy["server"]
-                    port = proxy["port"]
-                    udp = proxy["udp"]
+                    server = proxy.get("server", "")
+                    port = int(proxy.get("port", 443))
                     uuid = proxy.get("uuid", "")
                     password = proxy.get("password", "")
                     sni = proxy.get("sni", "")
                     insecure = int(proxy.get("skip-cert-verify", 0))
-                    udp_relay_mode = proxy.get("udp-relay-mode", "bbr")
-                    congestion = proxy.get("congestion-controller", "")
-                    tuic_meta = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure={insecure}&alpn={alpn}&mode={udp_relay_mode}"
-                    
+                    udp_relay_mode = proxy.get("udp-relay-mode", "naive")
+                    congestion = proxy.get("congestion-controller", "bbr")
+                    alpn = proxy.get("alpn", [])[0] if proxy.get("alpn") and len(proxy["alpn"]) > 0 else None
+                    tuic_meta_neko = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure={insecure}&alpn={alpn}&mode={udp_relay_mode}"
+                    tuic_meta = f"tuic://{uuid}:{password}@{server}:{port}?sni={sni}&congestion_control={congestion}&udp_relay_mode={udp_relay_mode}&alpn={alpn}&allow_insecure={insecure}"
                     merged_proxies.append(tuic_meta)
-                    merged_proxies_neko.append(tuic_meta)
+                    merged_proxies_neko.append(tuic_meta_neko)
                 elif proxy['type'] == "hysteria2":
-                    server = proxy["server"]
-                    port = proxy["port"]
+                    server = proxy.get("server", "")
+                    port = int(proxy.get("port", 443))
                     auth = proxy.get("password", "")
+                    obfs = proxy.get("obfs", "")
+                    obfs_password = proxy.get("obfs-password","")
                     sni = proxy.get("sni", "")
                     insecure = int(proxy.get("skip-cert-verify", 0))
-                    hy2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}#hysteria2_meta_{index}"
+                    hy2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#hysteria2_meta_{index}"
                     merged_proxies.append(hy2_meta)
                     merged_proxies_neko.append(hy2_meta)
                 elif proxy['type'] == 'hysteria':
-                    server = proxy["server"]           
-                    mport = str(proxy["port"])
-                    ports = mport.split(",")
-                    port = int(ports[0])
+                    server = proxy.get("server", "")
+                    port = int(proxy.get("port", 443))
+                    ports = proxy.get("port", "")
                     protocol = proxy.get("protocol", "udp")
                     up_mbps = 50
                     down_mbps = 80                   
@@ -113,20 +116,21 @@ def process_clash(data, index):
                     fast_open = int(proxy.get("fast_open", 1))
                     auth = proxy.get("auth-str", "")
                     # 生成URL
-                    hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={mport}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria{index}"
+                    hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria_meta_{index}"
                     merged_proxies.append(hysteria_meta)
                     merged_proxies_neko.append(hysteria_meta)
                 elif proxy['type'] == 'ssr':
-                    server = proxy["server"]           
-                    port = proxy["port"]
+                    server = proxy.get("server", "")
+                    port = int(proxy.get("port", 443))
                     password = proxy.get("password", "")
                     password = base64.b64encode(password.encode()).decode()
                     cipher = proxy.get("cipher", "")
                     obfs = proxy.get("obfs", "")
                     protocol = proxy.get("protocol", "")
-
+                    protocol_param = proxy.get("protocol-param", "")
+                    obfs_param = proxy.get("obfs-param", "")
                     # 生成URL
-                    ssr_source=f"{server}:{port}:{protocol}:{cipher}:{obfs}:{password}/?remarks=&protoparam=&obfsparam="
+                    ssr_source=f"{server}:{port}:{protocol}:{cipher}:{obfs}:{password}/?remarks=ssr_meta_{index}&protoparam{protocol_param}=&obfsparam={obfs_param}"
                     
                     ssr_source=base64.b64encode(ssr_source.encode()).decode()
                     ssr_meta = f"ssr://{ssr_source}"
