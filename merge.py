@@ -135,7 +135,6 @@ def process_clash(data, index):
                     ssr_source=base64.b64encode(ssr_source.encode()).decode()
                     ssr_meta = f"ssr://{ssr_source}"
                     merged_proxies.append(ssr_meta)
-
 def process_naive(data, index):
     try:
         json_data = json.loads(data)
@@ -158,15 +157,16 @@ def process_shadowtls(data, index):
     try:
         json_data = json.loads(data)
         # 处理 shadowtls 数据
+        server = json_data["outbounds"][1].get("server", "")
+        server_port = json_data["outbounds"][1].get("server_port", "")
+        method = json_data["outbounds"][0].get("method", "")
+        password = json_data["outbounds"][0].get("password", "")
+        version = int(json_data["outbounds"][1].get("version", 0))
+        host = json_data["outbounds"][1]["tls"].get("server_name", "")
+        shadowtls_password = json_data["outbounds"][1].get("password", "")
 
-        server = json_data["outbounds"][1]["server"]
-        server_port = json_data["outbounds"][1]["server_port"]
-        method = json_data["outbounds"][0]["method"]
-        password = json_data["outbounds"][0]["password"]
-        version = int(json_data["outbounds"][1]["version"])
-        host = json_data["outbounds"][1]["tls"]["server_name"]
         ss = f"{method}:{password}@{server}:{server_port}"
-        shadowtls = f'{{"version": "{version}", "host": "{host}"}}'
+        shadowtls = f'{{"version": "{version}", "host": "{host}","password":{shadowtls_password}}}'
         shadowtls_proxy = "ss://"+base64.b64encode(ss.encode()).decode()+"?shadow-tls="+base64.b64encode(shadowtls.encode()).decode()+f"#shadowtls{index}"
         
         merged_proxies.append(shadowtls_proxy)
@@ -179,20 +179,18 @@ def process_hysteria(data, index):
         json_data = json.loads(data)
         # 处理 hysteria 数据
         # 提取字段值
-        server = json_data["server"]
-        protocol = json_data["protocol"]
-        # up_mbps = json_data["up_mbps"]
-        # down_mbps = json_data["down_mbps"]
-        up_mbps = 50
-        down_mbps = 100
-        alpn = json_data["alpn"]
-        obfs = json_data["obfs"]
-        insecure = int(json_data["insecure"])
-        server_name = json_data["server_name"]
-        fast_open = int(json_data["fast_open"])
-        auth = json_data["auth_str"]
+        server = json_data.get("server", "")
+        protocol = json_data.get("protocol", "")
+        up_mbps = json_data.get("up_mbps", "")
+        down_mbps = json_data.get("down_mbps", "")
+        alpn = json_data.get("alpn", "")
+        obfs = json_data.get("obfs", "")
+        insecure = int(json_data.get("insecure", 0))
+        server_name = json_data.get("server_name", "")
+        fast_open = int(json_data.get("fast_open", 0))
+        auth = json_data.get("auth_str", "")
         # 生成URL
-        hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria{index}"
+        hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#hysteria_{index}"
         merged_proxies.append(hysteria)
         merged_proxies_neko.append(hysteria)
 
