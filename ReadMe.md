@@ -1,14 +1,6 @@
 ## 简介
 
 **注意：clash内核无法使用这些节点，你要用clashmeta**
-<details>
-  <summary>点击展开/折叠</summary>
-
-提取并聚合chromego中的节点，并套上warp，让你感受白嫖加隐私的快乐体验，当然普通clash无法使用这些节点，我也不喜欢被别人抓取节点到免费节点池里
-完全是面向chromego写的，所以很多地方都写死了。套上warp的原因是方便看一些chromego不让看的网址，比如p开头的x开头的
-chromego如果更新我会及时修改代码保证代码可用，如果更新不及时请提issues
-
-</details>
 
 ## 为什么要套上warp
 <details>
@@ -32,7 +24,7 @@ chromego如果更新我会及时修改代码保证代码可用，如果更新不
 ```
 https://mareep.netlify.app/sub/merged_proxies.yaml
 ```
-**含hysteria2节点**
+**含hysteria2节点(节点最全）**
 ```
 https://mareep.netlify.app/sub/merged_proxies_new.yaml
 ```
@@ -41,18 +33,15 @@ https://mareep.netlify.app/sub/merged_proxies_new.yaml
 ```
 https://mareep.netlify.app/sub/merged_warp_proxies.yaml
 ```
-**含hysteria2节点**
+**含hysteria2节点(节点最全）**
 ```
 https://mareep.netlify.app/sub/merged_warp_proxies_new.yaml
 ```
-### shadowrocket订阅链接-节点较全
+### 通用链接 shadowrocket-nekoray
 ```
 https://mareep.netlify.app/sub/shadowrocket_base64.txt
 ```
-### nekoray订阅链接-节点较不全
-```
-https://mareep.netlify.app/sub/neko_base64.txt
-```
+
 ## 订阅链接分享（需要翻墙版-托管自github）
 <details>
   <summary>点击展开/折叠</summary>
@@ -65,29 +54,17 @@ https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_proxies.
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_warp_proxies.yaml
 ```
-### shadowrocket订阅链接-ios客户端
+### 通用链接 shadowrocket-nekoray
 ```
 https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/shadowrocket_base64.txt
 ```
-### nekoray订阅链接-Windows客户端
-```
-https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/neko_base64.txt
-```
+
 </details>
 
 
 ## 致谢
 [Alvin9999](https://github.com/Alvin9999/pac2/tree/master)
 
-## 其他订阅
-chromego中的clash节点(量很大，可用性未知)
-```
-https://fastly.jsdelivr.net/gh/jsvpn/jsproxy@dev/baitai/20200329/1302338.md
-```
-ermaozi
 
-clash订阅链接：https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
-
-v2ray订阅链接：https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
 
 

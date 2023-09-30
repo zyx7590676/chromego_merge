@@ -24,12 +24,9 @@ def process_clash(data, index):
     proxies = content.get('proxies', [])
     for i, proxy in enumerate(proxies):
         proxy['name'] = f"meta_{proxy['type']}_{index}{i+1}"
-        if proxy['type'] == 'hysteria':
-            proxy['up'] = 80
-            proxy['down'] = 100
     merged_proxies.extend(proxies)
-
-def process_shadowtls(data, index):
+# 处理sb，待办
+def process_sb(data, index):
     try:
         json_data = json.loads(data)
         # 处理 shadowtls 数据
@@ -40,6 +37,8 @@ def process_shadowtls(data, index):
         server = json_data["outbounds"][1]["server"]
         server_port = json_data["outbounds"][1]["server_port"]
         server_name = json_data["outbounds"][1]["tls"]["server_name"]
+        shadowtls_password = json_data["outbounds"][1]["password"]
+        version = json_data["outbounds"][1]["version"]
         name = f"shadowtls_{index}"
         # 创建当前网址的proxy字典
         proxy = {
@@ -53,8 +52,8 @@ def process_shadowtls(data, index):
             "client-fingerprint": "chrome",
             "plugin-opts": {
                 "host": server_name,
-                "password": "",
-                "version": 1
+                "password": shadowtls_password,
+                "version": int(version)
             }
         }
 
@@ -231,10 +230,53 @@ def update_warp_proxy_groups(config_warp_data, merged_proxies):
 merged_proxies = []
 
 # 处理 clash URLs
+process_urls('./urls/clash_new_urls.txt', process_clash)
+
+# 处理 shadowtls URLs
+process_urls('./urls/sb_urls.txt', process_sb)
+
+# 处理 hysteria URLs
+process_urls('./urls/hysteria_urls.txt', process_hysteria)
+
+# 处理 hysteria2 URLs
+process_urls('./urls/hysteria2_urls.txt', process_hysteria2)
+
+# 处理 xray URLs
+process_urls('./urls/xray_urls.txt', process_xray)
+
+# 读取普通的配置文件内容
+with open('./templates/clash_template.yaml', 'r', encoding='utf-8') as file:
+    config_data = yaml.safe_load(file)
+
+# 读取warp配置文件内容
+with open('./templates/clash_warp_template.yaml', 'r', encoding='utf-8') as file:
+    config_warp_data = yaml.safe_load(file)
+
+# 添加合并后的代理到proxies部分
+config_data['proxies'].extend(merged_proxies)
+config_warp_data['proxies'].extend(merged_proxies)
+
+# 更新自动选择和节点选择的proxies的name部分
+update_proxy_groups(config_data, merged_proxies)
+update_warp_proxy_groups(config_warp_data, merged_proxies)
+
+# 将更新后的数据写入到一个YAML文件中，并指定编码格式为UTF-8
+with open('./sub/merged_proxies_new.yaml', 'w', encoding='utf-8') as file:
+    yaml.dump(config_data, file, sort_keys=False, allow_unicode=True)
+
+with open('./sub/merged_warp_proxies_new.yaml', 'w', encoding='utf-8') as file:
+    yaml.dump(config_warp_data, file, sort_keys=False, allow_unicode=True)
+
+print("聚合完成")
+
+# 处理其他
+merged_proxies = []
+
+# 处理 clash URLs
 process_urls('./urls/clash_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
-#process_urls('./urls/shadowtls_urls.txt', process_shadowtls)
+process_urls('./urls/sb_urls.txt', process_sb)
 
 # 处理 hysteria URLs
 process_urls('./urls/hysteria_urls.txt', process_hysteria)
@@ -243,7 +285,7 @@ process_urls('./urls/hysteria_urls.txt', process_hysteria)
 #process_urls('./urls/hysteria2_urls.txt', process_hysteria2)
 
 # 处理 xray URLs
-process_urls('./urls/reality_urls.txt', process_xray)
+process_urls('./urls/xray_urls.txt', process_xray)
 
 # 读取普通的配置文件内容
 with open('./templates/clash_template.yaml', 'r', encoding='utf-8') as file:
