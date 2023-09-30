@@ -276,7 +276,7 @@ def process_xray(data, index):
             server = json_data["outbounds"][0]["settings"]["servers"]["address"]
             method = json_data["outbounds"][0]["settings"]["servers"]["method"]
             password = json_data["outbounds"][0]["settings"]["servers"]["password"]
-            port = = json_data["outbounds"][0]["settings"]["servers"]["port"]
+            port = json_data["outbounds"][0]["settings"]["servers"]["port"]
             # 生成URL
             ss_source=f"{method}:{password}:{server}:{port}"
             ss_source=base64.b64encode(ss_source.encode()).decode()
