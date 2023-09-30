@@ -33,6 +33,24 @@ proxies:
   udp: true
   sni: gw.alicdn.com
   skip-cert-verify: true
+- name: WARP
+  type: wireguard
+  server: engage.cloudflareclient.com
+  port: 2408
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:87c0:ba32:773a:8d44:e353
+  private-key: +HpHpY/KjSv5hJdGrN2ok1A6CKhCmTQv5Unwyul9S1g=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  udp: true
+  reserved:
+  - 0
+  - 0
+  - 0
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 8.8.8.8
+  dialer-proxy: WARP前置节点
 - name: meta_hysteria_01
   type: hysteria
   server: hy2.dtku47.xyz
@@ -204,24 +222,18 @@ proxy-groups:
 - name: 节点选择
   type: select
   proxies:
-  - 自动选择
-  - DIRECT
   - 油管-绵阿羊
-  - meta_hysteria_01
-  - meta_hysteria_11
-  - meta_hysteria_21
-  - meta_hysteria_31
-  - meta_hysteria_41
-  - meta_hysteria_51
-  - meta_ss_61
-  - meta_hysteria_71
-  - meta_vless_81
-  - meta_ss_91
-  - hysteria_0
-  - hysteria_1
-  - hysteria_2
-  - hysteria_3
-  - reality_0
+  - WARP
+  - 自动选择
+  - 负载均衡
+  - 手动选择
+  - DIRECT
+- name: WARP前置节点
+  type: select
+  proxies:
+  - 自动选择
+  - 负载均衡
+  - 手动选择
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -244,6 +256,47 @@ proxy-groups:
   - hysteria_2
   - hysteria_3
   - reality_0
+- name: 手动选择
+  type: select
+  proxies:
+  - 油管-绵阿羊
+  - meta_hysteria_01
+  - meta_hysteria_11
+  - meta_hysteria_21
+  - meta_hysteria_31
+  - meta_hysteria_41
+  - meta_hysteria_51
+  - meta_ss_61
+  - meta_hysteria_71
+  - meta_vless_81
+  - meta_ss_91
+  - hysteria_0
+  - hysteria_1
+  - hysteria_2
+  - hysteria_3
+  - reality_0
+- name: 负载均衡
+  type: load-balance
+  proxies:
+  - 油管-绵阿羊
+  - meta_hysteria_01
+  - meta_hysteria_11
+  - meta_hysteria_21
+  - meta_hysteria_31
+  - meta_hysteria_41
+  - meta_hysteria_51
+  - meta_ss_61
+  - meta_hysteria_71
+  - meta_vless_81
+  - meta_ss_91
+  - hysteria_0
+  - hysteria_1
+  - hysteria_2
+  - hysteria_3
+  - reality_0
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  strategy: round-robin
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT

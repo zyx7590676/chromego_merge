@@ -66,8 +66,8 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  up: 80
-  down: 100
+  up: 50 Mbps
+  down: 100 Mbps
   skip-cert-verify: true
 - name: meta_tuic_21
   server: tuic3.dtku47.xyz
@@ -116,8 +116,8 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  up: 80
-  down: 100
+  up: 50 Mbps
+  down: 100 Mbps
 - name: meta_hysteria_71
   type: hysteria
   server: clash1.dtku47.xyz
@@ -126,8 +126,8 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  up: 80
-  down: 100
+  up: 50 Mbps
+  down: 100 Mbps
 - name: meta_hysteria_81
   type: hysteria
   server: hy2.dtku47.xyz
@@ -136,8 +136,8 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  up: 80
-  down: 100
+  up: 50 Mbps
+  down: 100 Mbps
 - name: meta_hysteria_91
   type: hysteria
   server: hy1.dtku47.xyz
@@ -146,8 +146,8 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  up: 80
-  down: 100
+  up: 50 Mbps
+  down: 100 Mbps
 - name: meta_hysteria_101
   type: hysteria
   server: hy2.dtku47.xyz
@@ -156,8 +156,8 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  up: 80
-  down: 100
+  up: 50 Mbps
+  down: 100 Mbps
 - name: meta_hysteria_111
   type: hysteria
   server: hy1.dtku47.xyz
@@ -166,8 +166,8 @@ proxies:
   alpn:
   - h3
   protocol: udp
-  up: 80
-  down: 100
+  up: 50 Mbps
+  down: 100 Mbps
 - name: meta_ss_121
   type: ss
   server: www2.dtku49.xyz
@@ -184,8 +184,8 @@ proxies:
   - h3
   protocol: udp
   auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
-  up: 80
-  down: 100
+  up: 2
+  down: 10
 - name: meta_vless_141
   type: vless
   server: 45.150.165.61
