@@ -145,7 +145,7 @@ def process_clash(data, index):
                     password = proxy.get("password", "")
                     cipher = proxy.get("cipher", "")
                     # 生成URL
-                    ss_source=f"{cipher}:{password}:{server}:{port}"
+                    ss_source=f"{cipher}:{password}@{server}:{port}"
                     
                     ss_source=base64.b64encode(ss_source.encode()).decode()
                     ss_meta = f"ss://{ss_source}"
@@ -278,7 +278,7 @@ def process_xray(data, index):
             password = json_data["outbounds"][0]["settings"]["servers"]["password"]
             port = json_data["outbounds"][0]["settings"]["servers"]["port"]
             # 生成URL
-            ss_source=f"{method}:{password}:{server}:{port}"
+            ss_source=f"{method}:{password}@{server}:{port}"
             ss_source=base64.b64encode(ss_source.encode()).decode()
             xray_proxy = f"ss://{ss_source}"
 
