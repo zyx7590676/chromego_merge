@@ -53,9 +53,9 @@ proxies:
   dialer-proxy: WARP前置节点
 - name: meta_hysteria2_01
   type: hysteria2
-  server: 108.181.17.116
-  port: 12309
-  password: ca7a7db6
+  server: 108.181.22.205
+  port: 10194
+  password: 87dc8c2e
   sni: www.bing.com
   skip-cert-verify: true
 - name: meta_hysteria_11

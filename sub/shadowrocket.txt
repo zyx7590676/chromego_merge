@@ -1,4 +1,4 @@
-hysteria2://ca7a7db6@108.181.17.116:12309?insecure=1&sni=www.bing.com&obfs=&obfs-password=#hysteria2_meta_0
+hysteria2://87dc8c2e@108.181.22.205:10194?insecure=1&sni=www.bing.com&obfs=&obfs-password=#hysteria2_meta_0
 hysteria://www.dtku46.xyz:11223?peer=&auth=mqoE9qSoyMFa&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=11223&obfs=&protocol=udp&fastopen=1#hysteria_meta_1
 tuic://ed6a538a-6e66-4f21-a769-4b389bb2f3ab:dongtaiwang@tuic3.dtku47.xyz:12255?sni=&congestion_control=bbr&udp_relay_mode=native&alpn=h3&allow_insecure=0
 hysteria2://87dc8c2e@108.181.22.205:10194?insecure=1&sni=www.bing.com&obfs=&obfs-password=#hysteria2_meta_3
