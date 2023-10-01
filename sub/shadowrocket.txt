@@ -2,7 +2,7 @@ hysteria2://87dc8c2e@108.181.22.205:10194?insecure=1&sni=www.bing.com&obfs=&obfs
 hysteria://www.dtku46.xyz:11223?peer=&auth=mqoE9qSoyMFa&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=11223&obfs=&protocol=udp&fastopen=1#hysteria_meta_1
 tuic://ed6a538a-6e66-4f21-a769-4b389bb2f3ab:dongtaiwang@tuic3.dtku47.xyz:12255?sni=&congestion_control=bbr&udp_relay_mode=native&alpn=h3&allow_insecure=0
 hysteria2://87dc8c2e@108.181.22.205:10194?insecure=1&sni=www.bing.com&obfs=&obfs-password=#hysteria2_meta_3
-vless://b1417278-b409-456a-865c-7f91f6bdfb25@www.dtku46.xyz:21116?security=reality&allowInsecure0&flow=xtls-rprx-vision&type=tcp&fp=chrome&pbk=mMOWuVq1mFtGQwT3dPw9ZpIQoA5Ft2lG-_xhVSJDUlw&sid=6ba85179e30d4fc2&sni=www.lovelive-anime.jp&serviceName=&path=&host=#vless_meta_4
+hysteria://www.dtku46.xyz:11223?peer=&auth=mqoE9qSoyMFa&insecure=1&upmbps=50&downmbps=80&alpn=h3&mport=11223&obfs=&protocol=udp&fastopen=1#hysteria_meta_4
 hysteria2://87dc8c2e@108.181.22.205:10194?insecure=1&sni=www.bing.com&obfs=&obfs-password=#hysteria2_meta_5
 hysteria://hy2.dtku47.xyz:15566?peer=&auth=jQrGpwSqp34P&insecure=0&upmbps=50&downmbps=80&alpn=h3&mport=15566&obfs=&protocol=udp&fastopen=1#hysteria_meta_6
 hysteria://clash1.dtku47.xyz:11223?peer=&auth=O5tQQiW2xKf5&insecure=0&upmbps=50&downmbps=80&alpn=h3&mport=11223&obfs=&protocol=udp&fastopen=1#hysteria_meta_7

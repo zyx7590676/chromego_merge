@@ -69,20 +69,17 @@ proxies:
   password: 87dc8c2e
   sni: www.bing.com
   skip-cert-verify: true
-- name: meta_vless_41
-  type: vless
+- name: meta_hysteria_41
+  type: hysteria
   server: www.dtku46.xyz
-  port: 21116
-  udp: true
-  uuid: b1417278-b409-456a-865c-7f91f6bdfb25
-  tls: true
-  servername: www.lovelive-anime.jp
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: mMOWuVq1mFtGQwT3dPw9ZpIQoA5Ft2lG-_xhVSJDUlw
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
+  port: 11223
+  auth-str: mqoE9qSoyMFa
+  alpn:
+  - h3
+  protocol: udp
+  up: 50 Mbps
+  down: 100 Mbps
+  skip-cert-verify: true
 - name: meta_hysteria2_51
   type: hysteria2
   server: 108.181.22.205
@@ -300,7 +297,7 @@ proxy-groups:
   - meta_hysteria_11
   - meta_tuic_21
   - meta_hysteria2_31
-  - meta_vless_41
+  - meta_hysteria_41
   - meta_hysteria2_51
   - meta_hysteria_61
   - meta_hysteria_71
@@ -332,7 +329,7 @@ proxy-groups:
   - meta_hysteria_11
   - meta_tuic_21
   - meta_hysteria2_31
-  - meta_vless_41
+  - meta_hysteria_41
   - meta_hysteria2_51
   - meta_hysteria_61
   - meta_hysteria_71
