@@ -81,16 +81,66 @@ proxies:
   protocol: udp
   up: 50 Mbps
   down: 100 Mbps
-- name: meta_hysteria_31
-  type: hysteria
-  server: hy1.dtku47.xyz
-  port: 22334
-  auth-str: lASdKzWK0VxL
-  alpn:
-  - h3
-  protocol: udp
-  up: 50 Mbps
-  down: 100 Mbps
+- name: meta_vmess_31
+  type: vmess
+  server: 104.26.9.22
+  port: 8080
+  cipher: auto
+  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+  alterId: 0
+  tls: false
+  skip-cert-verify: true
+  servername: dual-nothing-prep-exit.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+    headers:
+      host: dual-nothing-prep-exit.trycloudflare.com
+- name: meta_vmess_32
+  type: vmess
+  server: 172.64.97.235
+  port: 8080
+  cipher: auto
+  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+  alterId: 0
+  tls: false
+  skip-cert-verify: true
+  servername: dual-nothing-prep-exit.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+    headers:
+      host: dual-nothing-prep-exit.trycloudflare.com
+- name: meta_vmess_33
+  type: vmess
+  server: 104.19.38.28
+  port: 8080
+  cipher: auto
+  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+  alterId: 0
+  tls: false
+  skip-cert-verify: true
+  servername: dual-nothing-prep-exit.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+    headers:
+      host: dual-nothing-prep-exit.trycloudflare.com
+- name: meta_vmess_34
+  type: vmess
+  server: 104.19.38.48
+  port: 8080
+  cipher: auto
+  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+  alterId: 0
+  tls: false
+  skip-cert-verify: true
+  servername: dual-nothing-prep-exit.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+    headers:
+      host: dual-nothing-prep-exit.trycloudflare.com
 - name: meta_hysteria_41
   type: hysteria
   server: hy2.dtku47.xyz
@@ -111,105 +161,164 @@ proxies:
   protocol: udp
   up: 50 Mbps
   down: 100 Mbps
-- name: meta_ss_61
-  type: ss
-  server: www2.dtku49.xyz
-  port: 11105
-  password: thqfFCl0zl4Wyc0FaKxTQw==
-  cipher: 2022-blake3-aes-128-gcm
+- name: meta_hysteria_61
+  type: hysteria
+  server: 208.87.243.151
+  port: 38845
+  auth_str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
 - name: meta_hysteria_71
   type: hysteria
-  server: www.dtku50.xyz
-  port: 43250
-  sni: bing.com
+  server: 208.87.243.151
+  port: 38845
+  auth_str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
+- name: meta_hysteria_81
+  type: hysteria
+  server: 108.181.24.77
+  port: 37872
+  auth-str: dongtaiwang.com
+  sni: apple.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: 2S9M5Gs0pgRsaTObNghoLZx6wPkBJOGTFWvf4R06Us5hUNtfr7
-  up: 2
-  down: 10
-- name: meta_vless_81
-  type: vless
-  server: 45.150.165.61
-  port: 25678
-  udp: true
-  uuid: 34f36b97-1fb7-41f3-8db4-912cc69e724a
-  tls: true
-  servername: itunes.apple.com
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: sJsSZcA2DyAHDTcoe8Utbz9JaXJPMVmtHmiXxWmcExc
-  client-fingerprint: chrome
+  up: 11 Mbps
+  down: 55 Mbps
 - name: meta_hysteria_91
   type: hysteria
-  server: www3.dtku49.xyz
-  port: 58693
-  sni: bing.com
-  skip-cert-verify: true
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
   alpn:
   - h3
-  protocol: udp
-  auth_str: nbdyVMqucpFMmyRiwcRQFI7EeKzJWjPYuks3ZzEhCv6HjeZvbh
-  up: 11
-  down: 55
+  sni: apple.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
 - name: hysteria_0
   type: hysteria
-  server: 167.160.91.115
-  port: 13928
-  ports: 13928
-  auth_str: BF0LL4L2jlqSdW3KxjQv81AiFFjj90vWRHeUoqUuTVPeDAGvq3
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: paypal.com
+  sni: apple.com
   skip-cert-verify: true
   alpn:
   - h3
 - name: hysteria_1
   type: hysteria
-  server: 173.234.25.52
-  port: 20164
-  ports: 20164
-  auth_str: Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: www.microsoft.com
+  sni: apple.com
   skip-cert-verify: true
   alpn:
   - h3
 - name: hysteria_2
   type: hysteria
-  server: 173.234.25.52
-  port: 20164
-  ports: 20164
-  auth_str: Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: www.microsoft.com
+  sni: apple.com
   skip-cert-verify: true
   alpn:
   - h3
 - name: hysteria_3
   type: hysteria
-  server: 51.158.54.46
-  port: 11926
-  ports: 11926
-  auth_str: Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: youku.com
+  sni: apple.com
   skip-cert-verify: true
   alpn:
   - h3
+- name: reality_0
+  type: vless
+  server: 1.162.51.106
+  port: 37898
+  uuid: ec302de4-6b3d-4f03-a228-3c6d303ed370
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: www.yahoo.com
+  reality-opts:
+    public-key: v6uWJJmVGFPd0K040QK3PJHCbPc74kXFoQmAhpu30jQ
+    short-id: e12d7fdb
+- name: reality_1
+  type: vless
+  server: 1.162.51.106
+  port: 37898
+  uuid: ec302de4-6b3d-4f03-a228-3c6d303ed370
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: www.yahoo.com
+  reality-opts:
+    public-key: v6uWJJmVGFPd0K040QK3PJHCbPc74kXFoQmAhpu30jQ
+    short-id: e12d7fdb
+- name: reality_2
+  type: vless
+  server: 1.162.51.106
+  port: 37898
+  uuid: ec302de4-6b3d-4f03-a228-3c6d303ed370
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: www.yahoo.com
+  reality-opts:
+    public-key: v6uWJJmVGFPd0K040QK3PJHCbPc74kXFoQmAhpu30jQ
+    short-id: e12d7fdb
+- name: reality_3
+  type: vless
+  server: 1.162.51.106
+  port: 37898
+  uuid: ec302de4-6b3d-4f03-a228-3c6d303ed370
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: www.yahoo.com
+  reality-opts:
+    public-key: v6uWJJmVGFPd0K040QK3PJHCbPc74kXFoQmAhpu30jQ
+    short-id: e12d7fdb
 proxy-groups:
 - name: 节点选择
   type: select
@@ -236,17 +345,24 @@ proxy-groups:
   - meta_hysteria_01
   - meta_hysteria_11
   - meta_hysteria_21
-  - meta_hysteria_31
+  - meta_vmess_31
+  - meta_vmess_32
+  - meta_vmess_33
+  - meta_vmess_34
   - meta_hysteria_41
   - meta_hysteria_51
-  - meta_ss_61
+  - meta_hysteria_61
   - meta_hysteria_71
-  - meta_vless_81
+  - meta_hysteria_81
   - meta_hysteria_91
   - hysteria_0
   - hysteria_1
   - hysteria_2
   - hysteria_3
+  - reality_0
+  - reality_1
+  - reality_2
+  - reality_3
 - name: 手动选择
   type: select
   proxies:
@@ -254,17 +370,24 @@ proxy-groups:
   - meta_hysteria_01
   - meta_hysteria_11
   - meta_hysteria_21
-  - meta_hysteria_31
+  - meta_vmess_31
+  - meta_vmess_32
+  - meta_vmess_33
+  - meta_vmess_34
   - meta_hysteria_41
   - meta_hysteria_51
-  - meta_ss_61
+  - meta_hysteria_61
   - meta_hysteria_71
-  - meta_vless_81
+  - meta_hysteria_81
   - meta_hysteria_91
   - hysteria_0
   - hysteria_1
   - hysteria_2
   - hysteria_3
+  - reality_0
+  - reality_1
+  - reality_2
+  - reality_3
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -272,17 +395,24 @@ proxy-groups:
   - meta_hysteria_01
   - meta_hysteria_11
   - meta_hysteria_21
-  - meta_hysteria_31
+  - meta_vmess_31
+  - meta_vmess_32
+  - meta_vmess_33
+  - meta_vmess_34
   - meta_hysteria_41
   - meta_hysteria_51
-  - meta_ss_61
+  - meta_hysteria_61
   - meta_hysteria_71
-  - meta_vless_81
+  - meta_hysteria_81
   - meta_hysteria_91
   - hysteria_0
   - hysteria_1
   - hysteria_2
   - hysteria_3
+  - reality_0
+  - reality_1
+  - reality_2
+  - reality_3
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
