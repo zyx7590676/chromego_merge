@@ -133,6 +133,28 @@ proxies:
   protocol: udp
   up: 50 Mbps
   down: 100 Mbps
+- name: meta_hysteria_51
+  type: hysteria
+  server: hy1.dtku47.xyz
+  port: 22334
+  auth-str: lASdKzWK0VxL
+  alpn:
+  - h3
+  protocol: udp
+  up: 50 Mbps
+  down: 100 Mbps
+- name: meta_hysteria_61
+  type: hysteria
+  server: 2001:bc8:32d7:158::4
+  port: 50011
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
 - name: meta_hysteria_71
   type: hysteria
   server: 2001:bc8:32d7:158::4
@@ -169,6 +191,20 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
+- name: hysteria_0
+  type: hysteria
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
 - name: hysteria_1
   type: hysteria
   server: 109.104.153.91
@@ -184,6 +220,20 @@ proxies:
   alpn:
   - h3
 - name: hysteria_2
+  type: hysteria
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: hysteria_3
   type: hysteria
   server: 109.104.153.91
   port: 37519
@@ -240,11 +290,15 @@ proxy-groups:
   - meta_vmess_33
   - meta_vmess_34
   - meta_hysteria_41
+  - meta_hysteria_51
+  - meta_hysteria_61
   - meta_hysteria_71
   - meta_hysteria_81
   - meta_hysteria_91
+  - hysteria_0
   - hysteria_1
   - hysteria_2
+  - hysteria_3
   - reality_0
   - reality_3
 - name: 自动选择
@@ -262,11 +316,15 @@ proxy-groups:
   - meta_vmess_33
   - meta_vmess_34
   - meta_hysteria_41
+  - meta_hysteria_51
+  - meta_hysteria_61
   - meta_hysteria_71
   - meta_hysteria_81
   - meta_hysteria_91
+  - hysteria_0
   - hysteria_1
   - hysteria_2
+  - hysteria_3
   - reality_0
   - reality_3
 rules:
