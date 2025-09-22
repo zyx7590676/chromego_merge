@@ -45,18 +45,6 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: meta_hysteria2_11
-  type: hysteria2
-  server: 2001:bc8:32d7:302::11
-  port: 20088
-  password: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
 - name: meta_tuic_21
   server: 2001:bc8:32d7:302::16
   port: 34997
@@ -137,66 +125,6 @@ proxies:
   protocol: udp
   up: 50 Mbps
   down: 100 Mbps
-- name: meta_vmess_91
-  type: vmess
-  server: 104.26.9.22
-  port: 8080
-  cipher: auto
-  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: dual-nothing-prep-exit.trycloudflare.com
-  network: ws
-  ws-opts:
-    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
-    headers:
-      host: dual-nothing-prep-exit.trycloudflare.com
-- name: meta_vmess_92
-  type: vmess
-  server: 172.64.97.235
-  port: 8080
-  cipher: auto
-  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: dual-nothing-prep-exit.trycloudflare.com
-  network: ws
-  ws-opts:
-    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
-    headers:
-      host: dual-nothing-prep-exit.trycloudflare.com
-- name: meta_vmess_93
-  type: vmess
-  server: 104.19.38.28
-  port: 8080
-  cipher: auto
-  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: dual-nothing-prep-exit.trycloudflare.com
-  network: ws
-  ws-opts:
-    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
-    headers:
-      host: dual-nothing-prep-exit.trycloudflare.com
-- name: meta_vmess_94
-  type: vmess
-  server: 104.19.38.48
-  port: 8080
-  cipher: auto
-  uuid: ef8c954e-014f-4b36-8273-9b5086afab34
-  alterId: 0
-  tls: false
-  skip-cert-verify: true
-  servername: dual-nothing-prep-exit.trycloudflare.com
-  network: ws
-  ws-opts:
-    path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
-    headers:
-      host: dual-nothing-prep-exit.trycloudflare.com
 - name: meta_hysteria_101
   type: hysteria
   server: hy2.dtku47.xyz
@@ -218,18 +146,6 @@ proxies:
   up: 50 Mbps
   down: 100 Mbps
 - name: meta_hysteria_121
-  type: hysteria
-  server: 2001:bc8:32d7:158::4
-  port: 50011
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: meta_hysteria_131
   type: hysteria
   server: 2001:bc8:32d7:158::4
   port: 50011
@@ -279,20 +195,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: hysteria_1
-  type: hysteria
-  server: 109.104.153.91
-  port: 37519
-  ports: 10000-20000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 - name: hysteria_2
   type: hysteria
   server: 109.104.153.91
@@ -307,52 +209,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: hysteria_3
-  type: hysteria
-  server: 109.104.153.91
-  port: 37519
-  ports: 10000-20000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: hysteria2_0
-  type: hysteria2
-  server: 104.168.10.176
-  port: 35205
-  password: dongtaiwang.com
-  fast-open: true
-  sni: apple.com
-  skip-cert-verify: true
-- name: hysteria2_1
-  type: hysteria2
-  server: 104.168.10.176
-  port: 35205
-  password: dongtaiwang.com
-  fast-open: true
-  sni: apple.com
-  skip-cert-verify: true
-- name: hysteria2_2
-  type: hysteria2
-  server: 104.168.10.176
-  port: 35205
-  password: dongtaiwang.com
-  fast-open: true
-  sni: apple.com
-  skip-cert-verify: true
-- name: hysteria2_3
-  type: hysteria2
-  server: 104.168.10.176
-  port: 35205
-  password: dongtaiwang.com
-  fast-open: true
-  sni: apple.com
-  skip-cert-verify: true
 - name: reality_0
   type: vless
   server: 2001:bc8:32d7:302::13
@@ -389,7 +245,6 @@ proxy-groups:
   - DIRECT
   - 油管-绵阿羊
   - meta_hysteria2_01
-  - meta_hysteria2_11
   - meta_tuic_21
   - meta_hysteria2_31
   - meta_tuic_41
@@ -397,24 +252,13 @@ proxy-groups:
   - meta_hysteria_61
   - meta_hysteria_71
   - meta_hysteria_81
-  - meta_vmess_91
-  - meta_vmess_92
-  - meta_vmess_93
-  - meta_vmess_94
   - meta_hysteria_101
   - meta_hysteria_111
   - meta_hysteria_121
-  - meta_hysteria_131
   - meta_hysteria_141
   - meta_hysteria_151
   - hysteria_0
-  - hysteria_1
   - hysteria_2
-  - hysteria_3
-  - hysteria2_0
-  - hysteria2_1
-  - hysteria2_2
-  - hysteria2_3
   - reality_0
   - reality_3
 - name: 自动选择
@@ -425,7 +269,6 @@ proxy-groups:
   proxies:
   - 油管-绵阿羊
   - meta_hysteria2_01
-  - meta_hysteria2_11
   - meta_tuic_21
   - meta_hysteria2_31
   - meta_tuic_41
@@ -433,24 +276,13 @@ proxy-groups:
   - meta_hysteria_61
   - meta_hysteria_71
   - meta_hysteria_81
-  - meta_vmess_91
-  - meta_vmess_92
-  - meta_vmess_93
-  - meta_vmess_94
   - meta_hysteria_101
   - meta_hysteria_111
   - meta_hysteria_121
-  - meta_hysteria_131
   - meta_hysteria_141
   - meta_hysteria_151
   - hysteria_0
-  - hysteria_1
   - hysteria_2
-  - hysteria_3
-  - hysteria2_0
-  - hysteria2_1
-  - hysteria2_2
-  - hysteria2_3
   - reality_0
   - reality_3
 rules:
